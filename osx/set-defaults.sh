@@ -146,6 +146,12 @@ defaults write com.apple.screencapture disable-shadow -bool true
 # Ensure PNG Use for screenshots
 defaults write com.apple.screencapture type -string "png"
 
+# Screenshot name
+defaults write com.apple.screencapture name "capture"
+
+# Removes date from screenshot name
+defaults write com.apple.screencapture include-date -bool false
+
 ##
 ## KEYBOARD ##
 
