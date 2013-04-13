@@ -7,6 +7,12 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ##
+## MAINTENANCE ##
+
+# Rebuilding Right click menu "Open With"
+/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;
+
+##
 ## SYSTEM ##
 
 # Set the timezone; see `systemsetup -listtimezones` for other values
