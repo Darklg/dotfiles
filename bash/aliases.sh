@@ -11,6 +11,9 @@ alias hosts='sudo vim /etc/hosts';
 # Files
 alias clean='find . -iname ".DS_Store" -delete';
 
+# Alias Services Web
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
+
 # Dates
 alias now='date +"%T';
 alias nowdate='date +"%d-%m-%Y"';
@@ -20,6 +23,13 @@ alias reboot='sudo /sbin/reboot';
 alias poweroff='sudo /sbin/poweroff';
 alias halt='sudo /sbin/halt';
 alias shutdown='sudo /sbin/shutdown';
+alias suspend='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+
+# Alias Git
+alias gs='git status -s && git fetch'
+alias ga='git add -u . && git add .'
+alias gitput='git stash && git pull && git stash apply && git stash drop && git push'
+alias gitbye='git update-index --assume-unchanged'
 
 # Thanks to
 # - http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
