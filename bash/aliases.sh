@@ -1,3 +1,4 @@
+#!/bin/sh
 
 # Directory
 alias ls='ls -Gh';
