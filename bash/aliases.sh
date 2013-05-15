@@ -32,6 +32,7 @@ alias gfoire='git reset --hard HEAD'
 alias gitput='git stash && git pull && git push && git stash apply && git stash drop'
 alias gl='git log --pretty=format:"%h %ad | %s%d [%an]" --max-count=20 --graph --date=short'
 alias gs='git status -s && git fetch'
+alias ghpages='git checkout gh-pages && git rebase master && git checkout master';
 
 # Thanks to
 # - http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
