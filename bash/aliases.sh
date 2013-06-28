@@ -12,6 +12,9 @@ alias hosts='sudo vim /etc/hosts';
 # Files
 alias clean='find . -iname ".DS_Store" -delete';
 
+# Paste clipboard in new vim window | apple.stackexchange.com/a/1533
+alias pavi='pbpaste | vim -';
+
 # Alias Services Web
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 
