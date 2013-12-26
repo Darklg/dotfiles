@@ -36,7 +36,7 @@ alias gitput='git stash && git pull && git push && git stash apply && git stash 
 alias gl='git log --pretty=format:"%h %ad | %s%d [%an]" --max-count=20 --graph --date=short'
 alias gs='git status -s && git fetch'
 alias ghpages='git checkout gh-pages && git rebase master && git checkout master';
-alias giti='git pull --rebase && git push';
+alias giti='git gc && git pull --rebase && git push';
 
 # Thanks to
 # - http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
