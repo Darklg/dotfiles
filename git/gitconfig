@@ -1,0 +1,22 @@
+[color]
+  ui = true
+[format]
+  pretty = oneline
+[mergetool]
+  keepBackup = true
+[alias]
+  a = !git add -u . && git add .
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  ps = !git stash && git pull --rebase && git stash apply
+  pr = pull --rebase
+  res = reset --hard HEAD
+  who = shortlog -sn --
+  ignore = update-index --assume-unchanged
+  unignore = update-index --no-assume-unchanged
+  ignored = "!git ls-files -v | grep ^h | cut -c 3-"
+[branch]
+  autosetuprebase = always
+[push]
+  default = simple
+[diff]
+  algorithm = patience
