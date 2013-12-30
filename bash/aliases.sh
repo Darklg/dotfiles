@@ -1,5 +1,7 @@
 #!/bin/sh
 
+function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+
 # Directory
 alias ls='ls -Gh';
 alias ll='ls -l';
