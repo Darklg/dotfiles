@@ -1,0 +1,31 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"ApacheConf.tmLanguage",
+		"AutoFileName",
+		"Color Highlighter",
+		"ColorPicker",
+		"Csslisible",
+		"DashDoc",
+		"DuplicateSelections",
+		"Emmet",
+		"EncodingHelper",
+		"Git",
+		"GitGutter",
+		"JsFormat",
+		"JSHint",
+		"Package Control",
+		"PHP Syntax Checker",
+		"PhpTidy",
+		"Pretty JSON",
+		"SideBarEnhancements",
+		"SublimeLinter"
+	],
+	"repositories":
+	[
+		"https://sublime.wbond.net/testing/packages.json"
+	]
+}
