@@ -23,7 +23,7 @@
 	],
 	"bold_folder_labels": true,
 	"caret_style": "phase",
-	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
+	"color_scheme": "Packages/User/Twilight (SL).tmTheme",
 	"detect_slow_plugins": false,
 	"drag_text": false,
 	"draw_minimap_border": false,
@@ -31,7 +31,6 @@
 	"fade_fold_buttons": false,
 	"file_exclude_patterns":
 	[
-		".*",
 		"*.pyc",
 		"*.pyo",
 		"*.exe",
@@ -48,6 +47,7 @@
 		"*.pdb",
 		"*.idb",
 		".DS_Store",
+		".phptidy-cache",
 		"*.class",
 		"*.psd",
 		"*.db"
@@ -59,6 +59,8 @@
 		".git",
 		".hg",
 		"CVS",
+		"tmp",
+		".sass-cache",
 		"clrz_minify_cache"
 	],
 	"font_face": "Inconsolata",
@@ -85,6 +87,7 @@
 		"TCL",
 		"Ruby",
 		"Groovy",
+		"AdvancedNewFile",
 		"D",
 		"Lisp",
 		"Objective-C",
@@ -121,6 +124,6 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_simple_full_screen": true,
-	"word_separators": "./\\()\"':,.;<>~!@#$%^&*|+=[]{}`~?",
+	"word_separators": "./\\()\"':,.;<>~!@#%^&*|+=[]{}`~?",
 	"word_wrap": false
 }
