@@ -44,6 +44,7 @@ alias gl='git log --pretty=format:"%h %ad | %s%d [%an]" --max-count=20 --graph -
 alias gs='git status -s && git fetch'
 alias ghpages='git checkout gh-pages && git rebase master && git checkout master';
 alias giti='git gc && git pull --rebase && git push --all';
+alias gitisub='git pull --recurse-submodules && git submodule update --recursive';
 
 # Thanks to
 # - http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
