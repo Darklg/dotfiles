@@ -1,0 +1,5 @@
+*.last-run
+*.cache
+Package Control.system-ca-bundle
+Gist.sublime-settings
+*Copie en conflit*

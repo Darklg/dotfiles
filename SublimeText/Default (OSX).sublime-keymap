@@ -1,0 +1,147 @@
+[
+    {
+        "keys": [
+            ":"
+        ],
+        "command": "insert",
+        "args": {
+            "characters": ":"
+        },
+        "context": [
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "source.css"
+            }
+        ]
+    },
+    {
+        "keys": [
+            "ctrl+s"
+        ],
+        "command": "toggle_side_bar"
+    },
+    {
+        "keys": [
+            "ctrl+1"
+        ],
+        "command": "toggle_setting",
+        "args": {
+            "setting": "gutter"
+        }
+    },
+    {
+        "keys": [
+            "super+v"
+        ],
+        "command": "paste_and_indent"
+    },
+    {
+        "keys": [
+            "super+shift+v"
+        ],
+        "command": "paste"
+    },
+    {
+        "keys": [
+            "super+b"
+        ],
+        "command": "insert_snippet",
+        "args": {
+            "name": "Packages/User/Snippets/wrapstrong.sublime-snippet"
+        }
+    },
+    {
+        "keys": [
+            "super+i"
+        ],
+        "command": "insert_snippet",
+        "args": {
+            "name": "Packages/User/Snippets/wrapem.sublime-snippet"
+        }
+    },
+    {
+        "keys": [
+            "super+@"
+        ],
+        "command": "insert_snippet",
+        "args": {
+            "name": "Packages/User/Snippets/wrapmail.sublime-snippet"
+        }
+    },
+    {
+        "keys": [
+            "super+&"
+        ],
+        "command": "insert_snippet",
+        "args": {
+            "name": "Packages/User/Snippets/wrapa.sublime-snippet"
+        }
+    },
+    {
+        "keys": [
+            "super+é"
+        ],
+        "command": "insert_snippet",
+        "args": {
+            "name": "Packages/User/Snippets/wrapglink.sublime-snippet"
+        }
+    },
+    {
+        "keys": [
+            "ctrl+d"
+        ],
+        "command": "insert_snippet",
+        "args": {
+            "name": "Packages/User/Snippets/wrapemail.sublime-snippet"
+        }
+    },
+    {
+        "keys": [
+            "ctrl+-"
+        ],
+        "command": "set_layout",
+        "args": {
+            "cols": [
+                0.0,
+                1.0
+            ],
+            "rows": [
+                0.0,
+                0.5,
+                1.0
+            ],
+            "cells": [
+                [
+                    0,
+                    0,
+                    1,
+                    1
+                ],
+                [
+                    0,
+                    1,
+                    1,
+                    2
+                ]
+            ]
+        }
+    },
+    {
+        "keys": [
+            "super+k"
+        ]
+    },
+    {
+        "keys": [
+            "command+shift+r"
+        ],
+        "command": "browser_refresh",
+        "args": {
+            "auto_save": true,
+            "delay": 0,
+            "activate_browser": false,
+            "browser_name": "Google Chrome"
+        }
+    }
+]
