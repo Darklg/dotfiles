@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[' . glink('$0','$SELECTION') . ']]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>wrapglink</tabTrigger>
+    <!-- Optional: Description to show in the menu -->
+    <description>Wrap in glink</description>
+</snippet>

@@ -1,0 +1,4 @@
+<snippet>
+    <content><![CDATA[<strong>$SELECTION</strong>]]></content>
+    <description>Wrap in strong</description>
+</snippet>

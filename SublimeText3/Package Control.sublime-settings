@@ -1,0 +1,39 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"ApacheConf.tmLanguage",
+		"AutoFileName",
+		"Autoprefixer",
+		"Browser Refresh",
+		"CodeFormatter",
+		"Color Highlighter",
+		"ColorPicker",
+		"Csslisible",
+		"DashDoc",
+		"DuplicateSelections",
+		"Emmet",
+		"EncodingHelper",
+		"Git",
+		"GitGutter",
+		"INI",
+		"JsFormat",
+		"JSHint",
+		"LaTeX-IPA",
+		"Minifier",
+		"Package Control",
+		"PHP Syntax Checker",
+		"PhpTidy",
+		"Pretty JSON",
+		"SideBarEnhancements",
+		"SideBarGit",
+		"SublimeLinter",
+		"Theme - Spacegray"
+	],
+	"repositories":
+	[
+		"https://sublime.wbond.net/testing/packages.json"
+	]
+}
