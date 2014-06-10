@@ -20,7 +20,6 @@
 		"GitGutter",
 		"INI",
 		"JsFormat",
-		"JSHint",
 		"LaTeX-IPA",
 		"Minifier",
 		"Package Control",
@@ -30,6 +29,7 @@
 		"SideBarEnhancements",
 		"SideBarGit",
 		"SublimeLinter",
+		"SublimeLinter-jshint",
 		"Theme - Spacegray"
 	],
 	"repositories":
