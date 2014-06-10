@@ -45,6 +45,7 @@ alias gs='git status -s && git fetch'
 alias ghpages='git checkout gh-pages && git rebase master && git checkout master';
 alias giti='git gc && git pull --rebase && git push --all';
 alias gitisub='git pull --recurse-submodules && git submodule update --recursive';
+alias gitexp='git archive --format zip --output ../export.zip master && echo "Export ok !"';
 
 # Thanks to
 # - http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
