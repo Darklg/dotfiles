@@ -1,6 +1,7 @@
 {
 	"extensions":
 	[
-		"php"
+		"php",
+		"phtml"
 	]
 }
