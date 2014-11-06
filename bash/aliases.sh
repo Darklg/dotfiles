@@ -12,6 +12,10 @@ alias ..='cd ..';
 alias ...='cd ../..';
 alias hosts='sudo vim /etc/hosts';
 
+# PHP
+alias php='/Applications/MAMP/bin/php/php5.6.1/bin/php';
+alias composer='/Applications/MAMP/bin/php/php5.6.1/bin/php /Users/kevin/Websites/htdocs/composer.phar';
+
 # Utilities
 # Quick Webserver
 alias serv='open http://0.0.0.0:1234 && python -m SimpleHTTPServer 1234';
