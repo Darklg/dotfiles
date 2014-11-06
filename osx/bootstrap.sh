@@ -17,8 +17,19 @@ do
     command -v "$i" >/dev/null 2>&1 || { brew install "${i}"; }
 done;
 
+# Cask
+export HOMEBREW_CASK_OPTS=--appdir=/Applications;
+brew install caskroom/cask/brew-cask;
+cask_list="flux appcleaner google-chrome-canary xquartz firefox firefox-nightly spotify vlc";
+for i in $cask_list
+do
+    brew cask install "$i";
+done;
+
 # Cleanup
 brew cleanup;
+brew cask cleanup;
+
 
 #####################
 # Node
@@ -28,7 +39,7 @@ brew cleanup;
 command -v node >/dev/null 2>&1 || { brew install node; }
 
 # Update
-npm update -g;
+npm update -g --quiet;
 
 #####################
 # Node modules
