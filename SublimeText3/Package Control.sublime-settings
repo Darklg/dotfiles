@@ -6,7 +6,6 @@
 		"All Autocomplete",
 		"ApacheConf.tmLanguage",
 		"AutoFileName",
-		"Autoprefixer",
 		"Browser Refresh",
 		"CodeFormatter",
 		"Color Highlighter",
@@ -18,12 +17,11 @@
 		"Emmet",
 		"EncodingHelper",
 		"Git",
-		"GitGutter",
+		"GitGutter-Edge",
 		"INI",
 		"JsFormat",
 		"JSHint",
 		"JSHint Gutter",
-		"LaTeX-IPA",
 		"Minifier",
 		"Package Control",
 		"Pretty JSON",
@@ -35,7 +33,7 @@
 		"SublimeLinter-php",
 		"SyncedSideBar",
 		"Syntax Highlighting for Sass",
-		"Theme - Spacegray"
+		"Theme - Soda"
 	],
 	"repositories":
 	[
