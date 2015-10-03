@@ -10,11 +10,13 @@ alias la='ls -a';
 alias lla='ls -al';
 alias ..='cd ..';
 alias ...='cd ../..';
+alias ....='cd ../../..';
 alias hosts='sudo vim /etc/hosts';
 
 # PHP
 alias php='/Applications/MAMP/bin/php/php5.6.1/bin/php';
 alias composer='/Applications/MAMP/bin/php/php5.6.1/bin/php /Users/kevin/Websites/htdocs/composer.phar';
+alias phpunit='/Applications/MAMP/bin/php/php5.6.1/bin/php /usr/local/bin/phpunit';
 
 # Utilities
 # Quick Webserver
