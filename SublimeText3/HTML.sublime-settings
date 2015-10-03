@@ -1,6 +1,7 @@
 {
 	"extensions":
 	[
-		"twig"
+		"twig",
+		"html"
 	]
 }

@@ -80,6 +80,15 @@
     },
     {
         "keys": [
+            "super+\""
+        ],
+        "command": "insert_snippet",
+        "args": {
+            "name": "Packages/User/Snippets/wraparray.sublime-snippet"
+        }
+    },
+    {
+        "keys": [
             "super+é"
         ],
         "command": "insert_snippet",
@@ -129,8 +138,79 @@
     },
     {
         "keys": [
-            "super+k"
-        ]
+            "ctrl++"
+        ],
+        "command": "set_layout",
+        "args": {
+            "cols": [
+                0,
+                0.5,
+                1
+            ],
+            "rows": [
+                0,
+                0.5,
+                1
+            ],
+            "cells": [
+                [
+                    0,
+                    0,
+                    1,
+                    2
+                ],
+                [
+                    1,
+                    0,
+                    2,
+                    1
+                ],
+                [
+                    1,
+                    1,
+                    2,
+                    2
+                ]
+            ]
+        }
+    },
+    {
+        "keys": [
+            "ctrl+="
+        ],
+        "command": "set_layout",
+        "args": {
+            "cols": [
+                0,
+                0.5,
+                1
+            ],
+            "rows": [
+                0,
+                0.5,
+                1
+            ],
+            "cells": [
+                [
+                    0,
+                    0,
+                    2,
+                    1
+                ],
+                [
+                    0,
+                    1,
+                    1,
+                    2
+                ],
+                [
+                    1,
+                    1,
+                    2,
+                    2
+                ]
+            ]
+        }
     },
     {
         "keys": [
@@ -142,6 +222,15 @@
             "delay": 0,
             "activate_browser": false,
             "browser_name": "Google Chrome"
+        }
+    },
+    {
+        "keys": [
+            "super+shift+o"
+        ],
+        "command": "open_file",
+        "args": {
+            "file": "${project}"
         }
     }
 ]

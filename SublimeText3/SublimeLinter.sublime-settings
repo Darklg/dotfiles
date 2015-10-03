@@ -7,10 +7,21 @@
         "gutter_theme_excludes": [],
         "lint_mode": "load/save",
         "linters": {
+            "eslint": {
+                "@disable": false,
+                "args": [],
+                "excludes": [],
+                "ignore_match": [
+                    "doublequote"
+                ]
+            },
             "jshint": {
                 "@disable": false,
                 "args": [],
-                "excludes": []
+                "excludes": [],
+                "ignore_match": [
+                    "'jQuery' is not"
+                ]
             },
             "php": {
                 "@disable": false,
@@ -20,6 +31,7 @@
         },
         "mark_style": "outline",
         "no_column_highlights_line": false,
+        "passive_warnings": false,
         "paths": {
             "linux": [],
             "osx": [],
@@ -32,7 +44,7 @@
         },
         "rc_search_limit": 3,
         "shell_timeout": 10,
-        "show_errors_on_save": true,
+        "show_errors_on_save": 0,
         "show_marks_in_minimap": true,
         "syntax_map": {
             "html (django)": "html",
