@@ -1,9 +1,0 @@
-<snippet>
-    <content><![CDATA[{{block type='core/template' template='email/header.phtml'}}
-$SELECTION
-{{block type='core/template' template='email/footer.phtml'}}]]></content>
-    <!-- Optional: Tab trigger to activate the snippet -->
-    <tabTrigger>wrapemail</tabTrigger>
-    <!-- Optional: Description to show in the menu -->
-    <description>Wrap in email</description>
-</snippet>

@@ -1,7 +1,0 @@
-<snippet>
-    <content><![CDATA[<a href="#">$SELECTION</a>]]></content>
-    <!-- Optional: Tab trigger to activate the snippet -->
-    <tabTrigger>wrapa</tabTrigger>
-    <!-- Optional: Description to show in the menu -->
-    <description>Wrap in a</description>
-</snippet>

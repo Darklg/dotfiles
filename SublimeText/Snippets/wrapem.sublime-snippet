@@ -1,7 +1,0 @@
-<snippet>
-    <content><![CDATA[<em>$SELECTION</em>]]></content>
-    <!-- Optional: Tab trigger to activate the snippet -->
-    <tabTrigger>wrapem</tabTrigger>
-    <!-- Optional: Description to show in the menu -->
-    <description>Wrap in em</description>
-</snippet>

@@ -1,9 +1,0 @@
-{
-    "brace_style": "end-expand",
-    "keep_array_indentation": false,
-    "max_preserve_newlines": 2,
-    "preserve_newlines": true,
-    "keep_function_indentation": false,
-    "indent_with_tabs": false,
-    "ensure_newline_at_eof_on_save": true
-}
