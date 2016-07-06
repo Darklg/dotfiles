@@ -2,25 +2,27 @@
 	"auto_complete_delay": 200,
 	"binary_file_patterns":
 	[
-		"*.jpg",
-		"*.jpeg",
-		"*.png",
+		"*.dds",
+		"*.eot",
+		"*.font.js",
 		"*.gif",
-		"*.ttf",
+		"*.ico",
+		"*.jpeg",
+		"*.jpg",
+		"*.map",
+		"*.mo",
+		"*.mp3",
 		"*.otf",
+		"*.pdf",
+		"*.png",
 		"*.svg",
 		"*.swf",
-		"*.zip",
-		"*.font.js",
-		"*.map",
-		"*.woff",
 		"*.tga",
-		"*.mp3",
-		"*.dds",
-		"*.ico",
-		"*.eot",
-		"*.pdf",
-		"*.mo"
+		"*.ttf",
+		"*.woff",
+		"*.zip",
+		"wp-crontrol/**",
+		"wpusavevideos/coverage/**"
 	],
 	"bold_folder_labels": true,
 	"caret_style": "phase",
@@ -30,7 +32,7 @@
 	"draw_minimap_border": false,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
-	"fade_fold_buttons": false,
+	"fade_fold_buttons": true,
 	"file_exclude_patterns":
 	[
 		"*.pyc",
@@ -63,7 +65,7 @@
 		"CVS",
 		"tmp",
 		".sass-cache",
-		"clrz_minify_cache"
+		"node_modules"
 	],
 	"font_face": "Inconsolata",
 	"font_size": 14.0,
@@ -107,6 +109,7 @@
 	"index_exclude_patterns":
 	[
 		"node_modules",
+		".sass-cache",
 		"*.log"
 	],
 	"line_padding_bottom": 1,

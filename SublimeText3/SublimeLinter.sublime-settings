@@ -27,6 +27,29 @@
                 "@disable": false,
                 "args": [],
                 "excludes": []
+            },
+            "phplint": {
+                "@disable": true,
+                "args": [],
+                "excludes": [],
+                "ignore_match": [
+                    "unresolved function",
+                    "unknown property",
+                    "unknown method",
+                    "ABSPATH",
+                    "mixing elements of different types in array"
+                ]
+            },
+            "scss": {
+                "@disable": true,
+                "args": [],
+                "exclude-linter": "",
+                "excludes": [],
+                "include-linter": "",
+                "ignore_match": [
+                    "Indentation: Line",
+                    "NameFormat: Name of variable",
+                ]
             }
         },
         "mark_style": "outline",
