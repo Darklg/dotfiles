@@ -1,4 +1,11 @@
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
 "\e[A": history-search-backward
 "\e[B": history-search-forward
-set show-all-if-ambiguous on
-set completion-ignore-case on
+set completion-ignore-case On
+set show-all-if-ambiguous On
+set bell-style visible
