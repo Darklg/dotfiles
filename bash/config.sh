@@ -10,6 +10,9 @@ export COPYFILE_DISABLE=true;
 # don't put duplicate lines in the history
 export HISTCONTROL=ignoredups;
 
+# Cask
+export HOMEBREW_CASK_OPTS=--appdir=/Applications;
+
 #-------------------------
 # Actions when terminal opens
 
