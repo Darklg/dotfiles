@@ -1,22 +1,22 @@
-dotfiles
+My dotfiles
 ========
-
-My dotfiles. ( Original by @mathiasbynens )
+( Original by @mathiasbynens )
 
 ---
 
+# Install
+
 ## Download software
 
-```
-. set-defaults.sh; # OSX Settings
-. bootstrap.sh; # Software
-. config-logiciels.sh; # Software
-```
+- OSX Settings : `. set-defaults.sh`
+- Software : `. bootstrap.sh`
+- Config : `. config-logiciels.sh`
 
 ## Terminal 101
 
 - Copy .inputrc
 - Copy this into .bash_profile :
+
 ```
 export PATH="/usr/local/bin:$PATH";
 export PATH="/usr/local/sbin:$PATH";

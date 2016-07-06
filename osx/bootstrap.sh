@@ -47,12 +47,13 @@ brew cask install evernote;
 brew cask install flux;
 brew cask install handbrake;
 brew cask install onyx;
+brew cask install sizeup;
 brew cask install skype;
 brew cask install slack;
-brew cask install sizeup;
+brew cask install teamviewer;
 brew cask install the-unarchiver;
 brew cask install tripmode;
-brew cask install teamviewer;
+brew cask install tunnelbear;
 
 # Work
 brew cask install imageoptim;
