@@ -1,2 +1,16 @@
-node_modules/
 .DS_Store
+app/etc/local.xml
+magento/app/etc/local.xml
+magento/media/css/*.css
+magento/media/js/*.js
+magento/var/cache
+magento/var/log
+magento/var/report
+magento/var/resource_config.json
+magento/var/session
+node_modules/
+var/cache/
+var/log
+var/report
+var/session
+.htaccess
