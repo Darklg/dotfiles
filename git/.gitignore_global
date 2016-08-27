@@ -1,4 +1,7 @@
+*.log
+*.sql
 .DS_Store
+.htaccess
 app/etc/local.xml
 magento/app/etc/local.xml
 magento/media/css/*.css
@@ -13,4 +16,3 @@ var/cache/
 var/log
 var/report
 var/session
-.htaccess
