@@ -30,6 +30,7 @@ brew install phplint;
 brew install phpunit;
 brew install ttfautohint fontforge --with-python
 brew install wget;
+brew install youtube-dl;
 
 #####################
 # Cask : Software
@@ -39,6 +40,14 @@ export HOMEBREW_CASK_OPTS=--appdir=/Applications;
 brew tap caskroom/versions
 
 # Utilities
+brew cask install 1password;
+brew cask install betterzipql;
+brew cask install qlcolorcode;
+brew cask install qlmarkdown;
+brew cask install qlprettypatch;
+brew cask install qlstephen;
+brew cask install quicklook-json;
+brew cask install suspicious-package;
 brew cask install appcleaner;
 brew cask install disk-inventory-x;
 brew cask install divvy;
