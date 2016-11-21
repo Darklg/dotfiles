@@ -16,3 +16,6 @@ var/cache/
 var/log
 var/report
 var/session
+wp-config.php
+wp-content/uploads
+magento/media/catalog/product/cache
