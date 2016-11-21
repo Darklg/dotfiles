@@ -14,9 +14,8 @@ alias ....='cd ../../..';
 alias hosts='sudo vim /etc/hosts';
 
 # PHP
-alias php='/Applications/MAMP/bin/php/php5.6.10/bin/php';
-alias composer='/Applications/MAMP/bin/php/php5.6.10/bin/php /Users/kevin/Websites/htdocs/composer.phar';
-alias phpunit='/Applications/MAMP/bin/php/php5.6.10/bin/php /usr/local/bin/phpunit';
+alias composer='php /Users/kevin/Websites/htdocs/composer.phar';
+alias phpunit='php /usr/local/bin/phpunit';
 
 # Alias MySQL
 alias mysql='/Applications/MAMP/Library/bin/mysql'
@@ -43,6 +42,7 @@ alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 # Dates
 alias now='date +"%T';
 alias nowdate='date +"%d-%m-%Y"';
+alias settime='sudo ntpdate -u time.apple.com';
 
 # reboot / halt / poweroff
 alias reboot='sudo /sbin/reboot';
