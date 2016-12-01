@@ -66,16 +66,18 @@ brew cask install tunnelbear;
 
 # Work
 brew cask install imageoptim;
+brew cask install livereload;
 brew cask install mamp;
 brew cask install sequel-pro;
 brew cask install sourcetree;
 brew cask install sublime-text3;
-brew cask install svgcleaner;
+brew cask install svg-cleaner;
 brew cask install textexpander;
+brew cask install transmit;
 brew cask install vagrant-manager;
 brew cask install vagrant;
-brew cask install virtualbox;
 brew cask install virtualbox-extension-pack;
+brew cask install virtualbox;
 
 # Browsers
 brew cask install google-chrome;

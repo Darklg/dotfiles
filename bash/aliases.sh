@@ -11,6 +11,7 @@ alias lla='ls -al';
 alias ..='cd ..';
 alias ...='cd ../..';
 alias ....='cd ../../..';
+alias .....='cd ../../../..';
 alias hosts='sudo vim /etc/hosts';
 
 # PHP
@@ -55,7 +56,7 @@ alias suspend='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Res
 alias ga='git add -u . && git add .'
 alias gfoire='git reset --hard HEAD'
 alias gitput='git stash && git pull && git push --all && git stash apply && git stash drop'
-alias gl='git log --pretty=format:"%h %ad | %s%d [%an]" --max-count=20 --graph --date=short'
+alias gl='git log --pretty=format:"%Cred• %h%Creset%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset%n%s" --max-count=15 --reverse --date=short'
 alias gs='git status -s && git fetch'
 alias ghpages='git checkout gh-pages && git rebase master && git checkout master';
 alias giti='git gc && git pull --rebase && git push --all';
