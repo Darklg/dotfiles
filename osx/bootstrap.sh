@@ -51,7 +51,6 @@ brew cask install suspicious-package;
 brew cask install appcleaner;
 brew cask install disk-inventory-x;
 brew cask install divvy;
-brew cask install dropbox;
 brew cask install evernote;
 brew cask install flux;
 brew cask install handbrake;
