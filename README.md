@@ -21,8 +21,8 @@ My dotfiles
 export PATH="/usr/local/bin:$PATH";
 export PATH="/usr/local/sbin:$PATH";
 
-. /Users/kevin/websites/htdocs/git/dotfiles/bash/config.sh
-. /Users/kevin/websites/htdocs/git/dotfiles/bash/prompt.sh
-. /Users/kevin/websites/htdocs/git/dotfiles/bash/aliases.sh
-. /Users/kevin/websites/htdocs/git/dotfiles/bash/autocomplete.sh
+. ~/websites/htdocs/git/dotfiles/bash/config.sh
+. ~/websites/htdocs/git/dotfiles/bash/prompt.sh
+. ~/websites/htdocs/git/dotfiles/bash/aliases.sh
+. ~/websites/htdocs/git/dotfiles/bash/autocomplete.sh
 ```
