@@ -18,24 +18,33 @@ command -v brew >/dev/null 2>&1 || { ruby -e "$(curl -fsSL https://raw.github.co
 # Update
 brew update;
 
+# Add repos
+brew tap "caskroom/fonts"
+brew tap "caskroom/cask"
+
 # Cask
 brew install caskroom/cask/brew-cask;
-brew cask install osxfuse;
 
 # Modules
 brew install casperjs;
 brew install composer;
 brew install curl;
+brew install curlftpfs;
 brew install diff-so-fancy
 brew install ffmpeg;
 brew install git;
 brew install homebrew/boneyard/lftp;
 brew install imagemagick;
 brew install mackup;
+brew install phantomjs;
 brew install phplint;
 brew install phpunit;
+brew install redis;
 brew install shellcheck;
+brew install speedtest-cli;
+brew install tree;
 brew install ttfautohint fontforge --with-python
+brew install webpquicklook;
 brew install wget;
 brew install youtube-dl;
 
@@ -48,23 +57,24 @@ brew tap caskroom/versions
 
 # Utilities
 brew cask install 1password;
+brew cask install appcleaner;
 brew cask install betterzipql;
+brew cask install divvy;
+brew cask install grandperspective;
+brew cask install handbrake;
+brew cask install onyx;
+brew cask install osxfuse;
 brew cask install qlcolorcode;
 brew cask install qlmarkdown;
 brew cask install qlprettypatch;
 brew cask install qlstephen;
+brew cask install quicklook-csv;
 brew cask install quicklook-json;
-brew cask install suspicious-package;
-brew cask install appcleaner;
-brew cask install disk-inventory-x;
-brew cask install divvy;
-brew cask install evernote;
-brew cask install flux;
-brew cask install handbrake;
-brew cask install onyx;
+brew cask install quicklookase;
 brew cask install sizeup;
 brew cask install skype;
 brew cask install slack;
+brew cask install suspicious-package;
 brew cask install teamviewer;
 brew cask install the-unarchiver;
 brew cask install tripmode;
@@ -75,10 +85,11 @@ brew cask install imageoptim;
 brew cask install livereload;
 brew cask install mamp;
 brew cask install sequel-pro;
-brew cask install sourcetree;
 brew cask install sublime-text3;
 brew cask install svg-cleaner;
 brew cask install textexpander;
+brew cask install todoist
+brew cask install tower;
 brew cask install transmit;
 brew cask install vagrant-manager;
 brew cask install vagrant;
@@ -97,6 +108,9 @@ brew cask install vlc;
 
 # Libs & stuff
 brew cask install xquartz;
+
+# Fonts
+brew cask install font-inconsolata;
 
 ###################################
 ## Cleanup
@@ -122,8 +136,9 @@ npm config set cache-min 9999999;
 # Node modules
 #####################
 
-# Install grunt
+# grunt
 command -v grunt >/dev/null 2>&1 || { npm install -g grunt-cli;npm install -g grunt; }
+npm install -g speedline;
 
 ###################################
 ## Phar
