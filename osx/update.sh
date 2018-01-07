@@ -25,9 +25,11 @@ gem update;
 
 brew update;
 brew upgrade;
+brew prune;
 
 # CLEAN
 brew cleanup;
 brew cask cleanup;
 brew doctor;
+brew prune;
 
