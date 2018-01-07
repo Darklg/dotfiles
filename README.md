@@ -11,10 +11,11 @@ My dotfiles
 - OSX Settings : `. set-defaults.sh`
 - Software : `. bootstrap.sh`
 - Config : `. config-logiciels.sh`
+- mackup restore
 
 ## Terminal 101
 
-- Copy .inputrc
+- Copy bash/inputrc to ~/.inputrc
 - Copy this into .bash_profile :
 
 ```
