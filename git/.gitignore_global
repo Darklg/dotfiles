@@ -1,7 +1,7 @@
 *.log
 *.sql
 .DS_Store
-.htaccess
+/.htaccess
 app/etc/local.xml
 magento/app/etc/local.xml
 magento/media/css/*.css
@@ -19,3 +19,4 @@ var/session
 wp-config.php
 wp-content/uploads
 magento/media/catalog/product/cache
+pub/media
