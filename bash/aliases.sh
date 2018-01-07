@@ -1,5 +1,13 @@
 #!/bin/sh
 
+DOTFILES_ALIAS_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd );
+
+function chromereload(){
+    echo "- Reloading Current Chrome Tab";
+    osascript "${DOTFILES_ALIAS_DIR}/chrome-reload-url.applescript";
+    echo "- Tab is reloaded";
+}
+
 # Functions
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
