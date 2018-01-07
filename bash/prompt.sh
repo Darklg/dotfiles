@@ -12,8 +12,14 @@ status_style='\[\033[0;90m\]'
 prompt_style='\[\033[00m\]'
 command_style='\[\033[00m\]'
 
+
+# http://frontendmayhem.com/pimp-my-terminal/
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 # Prompt variable:
-PS1="$status_style"'$fill \t\n'"$prompt_style"'${debian_chroot:+($debian_chroot)}\[\e[0;32m\]\u@\h: \[\e[m\]\[\e[0;31m\]\w\[\e[m\]'"$command_style \n$ "
+PS1="$status_style"'$fill \t\n'"$prompt_style"'${debian_chroot:+($debian_chroot)}\[\e[0;32m\]\u@\h: \[\e[m\]\[\e[0;31m\]\w\[\e[m\]'"$command_style\$(parse_git_branch) \n$ "
 
 # Reset color for command output
 # (this one is invoked every time before a command is executed):
