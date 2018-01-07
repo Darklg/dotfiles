@@ -18,16 +18,23 @@ command -v brew >/dev/null 2>&1 || { ruby -e "$(curl -fsSL https://raw.github.co
 # Update
 brew update;
 
-# Modules
+# Cask
 brew install caskroom/cask/brew-cask;
+brew cask install osxfuse;
+
+# Modules
 brew install casperjs;
 brew install composer;
 brew install curl;
+brew install diff-so-fancy
+brew install ffmpeg;
 brew install git;
+brew install homebrew/boneyard/lftp;
 brew install imagemagick;
 brew install mackup;
 brew install phplint;
 brew install phpunit;
+brew install shellcheck;
 brew install ttfautohint fontforge --with-python
 brew install wget;
 brew install youtube-dl;
@@ -109,13 +116,14 @@ command -v node >/dev/null 2>&1 || { brew install node; }
 # Update
 npm update -g --quiet;
 
+npm config set cache-min 9999999;
+
 #####################
 # Node modules
 #####################
 
 # Install grunt
-command -v grunt >/dev/null 2>&1 || { npm install -g grunt-cli; }
-
+command -v grunt >/dev/null 2>&1 || { npm install -g grunt-cli;npm install -g grunt; }
 
 ###################################
 ## Phar
