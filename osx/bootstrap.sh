@@ -32,8 +32,10 @@ brew install curl;
 brew install curlftpfs;
 brew install diff-so-fancy
 brew install ffmpeg;
+brew install geoip;
 brew install git;
 brew install homebrew/boneyard/lftp;
+brew install htop;
 brew install imagemagick;
 brew install mackup;
 brew install phantomjs;
@@ -82,6 +84,7 @@ brew cask install tunnelbear;
 
 # Work
 brew cask install imageoptim;
+brew cask install imagealpha;
 brew cask install livereload;
 brew cask install mamp;
 brew cask install sequel-pro;
@@ -91,10 +94,10 @@ brew cask install textexpander;
 brew cask install todoist
 brew cask install tower;
 brew cask install transmit;
-brew cask install vagrant-manager;
-brew cask install vagrant;
-brew cask install virtualbox-extension-pack;
 brew cask install virtualbox;
+brew cask install virtualbox-extension-pack;
+brew cask install vagrant;
+brew cask install vagrant-manager;
 
 # Browsers
 brew cask install google-chrome;
@@ -111,6 +114,8 @@ brew cask install xquartz;
 
 # Fonts
 brew cask install font-inconsolata;
+brew cask install font-ubuntu;
+brew cask install font-ubuntu-mono-derivative-powerline;
 
 ###################################
 ## Cleanup
