@@ -20,3 +20,4 @@ wp-config.php
 wp-content/uploads
 magento/media/catalog/product/cache
 pub/media
+.vscode
