@@ -15,7 +15,8 @@ My dotfiles
 
 ## Terminal 101
 
-- Copy bash/inputrc to ~/.inputrc
+- Copy inputrc `rm ~/.inputrc; cp ~/websites/htdocs/dotfiles/bash/inputrc ~/.inputrc`
+- Copy tmux.conf `rm ~/.tmux.conf; cp ~/websites/htdocs/dotfiles/bash/tmux.conf ~/.tmux.conf`
 - Copy this into .bash_profile :
 
 ```
