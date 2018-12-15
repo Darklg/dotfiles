@@ -7,9 +7,11 @@
 "\e[A": history-search-backward
 "\e[B": history-search-forward
 
-set completion-ignore-case On
-set show-all-if-ambiguous On
 set bell-style visible
+set completion-ignore-case on
+set completion-query-items 200
+set show-all-if-ambiguous on
+set skip-completed-text on
+set visible-stats on
 
-"\t": menu-complete
 "\e[Z": menu-complete-backward
