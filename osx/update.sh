@@ -12,12 +12,14 @@ phpunit --self-update;
 ###################################
 
 npm update -g;
+npm install -g npm;
 
 ###################################
 ## RUBY
 ###################################
 
 gem update;
+gem cleanup;
 
 ###################################
 ## HOMEBREW
@@ -25,11 +27,16 @@ gem update;
 
 brew update;
 brew upgrade;
+brew cask upgrade;
 brew prune;
 
 # CLEAN
 brew cleanup;
-brew cask cleanup;
 brew doctor;
 brew prune;
 
+###################################
+## Mac
+###################################
+
+softwareupdate --install --all --force --verbose;
