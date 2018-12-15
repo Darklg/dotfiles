@@ -26,6 +26,7 @@ brew tap "caskroom/cask"
 brew install caskroom/cask/brew-cask;
 
 # Modules
+brew install autojump;
 brew install casperjs;
 brew install composer;
 brew install curl;
@@ -61,12 +62,16 @@ brew tap caskroom/versions
 brew cask install 1password;
 brew cask install appcleaner;
 brew cask install betterzipql;
+brew cask install coconutbattery;
 brew cask install divvy;
+brew cask install fluid;
 brew cask install grandperspective;
 brew cask install handbrake;
+brew cask install homebrew/cask-versions/java8
 brew cask install onyx;
 brew cask install osxfuse;
 brew cask install qlcolorcode;
+brew cask install qlimagesize;
 brew cask install qlmarkdown;
 brew cask install qlprettypatch;
 brew cask install qlstephen;
@@ -83,8 +88,8 @@ brew cask install tripmode;
 brew cask install tunnelbear;
 
 # Work
-brew cask install imageoptim;
 brew cask install imagealpha;
+brew cask install imageoptim;
 brew cask install livereload;
 brew cask install mamp;
 brew cask install sequel-pro;
@@ -94,10 +99,10 @@ brew cask install textexpander;
 brew cask install todoist
 brew cask install tower;
 brew cask install transmit;
-brew cask install virtualbox;
-brew cask install virtualbox-extension-pack;
 brew cask install vagrant;
 brew cask install vagrant-manager;
+brew cask install virtualbox;
+brew cask install virtualbox-extension-pack;
 
 # Browsers
 brew cask install google-chrome;
