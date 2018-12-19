@@ -1,5 +1,4 @@
 #!/bin/sh
-#!/bin/sh
 
 #-------------------------
 # Conf
@@ -13,8 +12,14 @@ export HISTCONTROL=ignoredups;
 # Cask
 export HOMEBREW_CASK_OPTS=--appdir=/Applications;
 
+# Path
+export PATH=/usr/local/bin:$PATH
+
 #-------------------------
 # Actions when terminal opens
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Display uptime
 uptime;
