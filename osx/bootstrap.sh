@@ -26,6 +26,7 @@ brew tap "caskroom/cask"
 brew install caskroom/cask/brew-cask;
 
 # Modules
+brew install atomicparsley;
 brew install autojump;
 brew install casperjs;
 brew install composer;
@@ -39,6 +40,7 @@ brew install homebrew/boneyard/lftp;
 brew install htop;
 brew install imagemagick;
 brew install mackup;
+brew install mas;
 brew install phantomjs;
 brew install phplint;
 brew install phpunit;
@@ -65,6 +67,7 @@ brew cask install betterzipql;
 brew cask install coconutbattery;
 brew cask install divvy;
 brew cask install fluid;
+brew cask install goofy;
 brew cask install grandperspective;
 brew cask install handbrake;
 brew cask install homebrew/cask-versions/java8
@@ -159,3 +162,12 @@ curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.pha
 chmod +x wp-cli.phar
 sudo mv wp-cli.phar /usr/local/bin/wp
 
+###################################
+## Mac App Store
+###################################
+
+mas install 669840342; # Cashflows
+mas install 957734279; # TogglDesktop
+mas install 1278508951; # Trello
+mas install 880001334; # Reeder
+mas install 568494494; # Pocket
