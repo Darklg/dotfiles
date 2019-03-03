@@ -28,12 +28,17 @@ gem cleanup;
 brew update;
 brew upgrade;
 brew cask upgrade;
-brew prune;
 
 # CLEAN
 brew cleanup;
 brew doctor;
 brew prune;
+
+###################################
+## Microsoft Office
+###################################
+
+/Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app/Contents/MacOS/msupdate --install
 
 ###################################
 ## Mac
