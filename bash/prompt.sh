@@ -14,8 +14,19 @@ command_style='\[\033[00m\]'
 
 
 # http://frontendmayhem.com/pimp-my-terminal/
+# https://unix.stackexchange.com/a/155077
 parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
+    if [ "${inside_git_repo}" ]; then
+        GIT_MESSAGE_TMP=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/');
+        output=$(git status --untracked-files=no --porcelain);
+        if [ -z "$output" ]; then
+            GIT_MESSAGE_TMP=$GIT_MESSAGE_TMP;
+        else
+            GIT_MESSAGE_TMP=$GIT_MESSAGE_TMP" \033[0;33m[!]\033[00m";
+        fi;
+        printf "${GIT_MESSAGE_TMP}";
+    fi;
 }
 
 # Prompt variable:
