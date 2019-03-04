@@ -10,6 +10,7 @@
 ###################################
 
 open /Applications/Utilities/Terminal.app;
+open /Applications/Notes.app;
 open /Applications/Tower.app;
 open /Applications/Google\ Chrome.app;
 open /Applications/Mail.app;
@@ -50,14 +51,15 @@ EOF
 ###################################
 
 # Left Screen
-dotfiles_position_app "Terminal" 3 "do action Upper Left";
+dotfiles_position_app "Notes" 3 "move and resize to {0, 0, 640, 708}";
+dotfiles_position_app "Terminal" 3 "move and resize to {640, 0, 640, 708}";
 dotfiles_position_app "Tower" 3 "do action Lower Left";
 dotfiles_position_app "Google Chrome" 3 "do action Right";
 
 # Right Screen
 dotfiles_position_app "Mail" 2 "do action Left";
-dotfiles_position_app "Todoist" 2 "move and resize to {1280, 0, 640, 720}";
-dotfiles_position_app "Trello" 2 "move and resize to {1920, 0, 640, 720}";
+dotfiles_position_app "Todoist" 2 "move and resize to {1280, 0, 640, 708}";
+dotfiles_position_app "Trello" 2 "move and resize to {1920, 0, 640, 708}";
 dotfiles_position_app "Slack" 2 "do action Lower Right";
 
 # Middle Screen
