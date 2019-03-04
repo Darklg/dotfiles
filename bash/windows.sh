@@ -64,7 +64,7 @@ dotfiles_position_app "Slack" 2 "do action Lower Right";
 dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
 
 ###################################
-## It's over !
+## It's over 9000!
 ###################################
 
 osascript <<EOF
