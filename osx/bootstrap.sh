@@ -67,6 +67,7 @@ brew cask install betterzipql;
 brew cask install coconutbattery;
 brew cask install divvy;
 brew cask install fluid;
+brew cask install free-ruler;
 brew cask install goofy;
 brew cask install grandperspective;
 brew cask install handbrake;
