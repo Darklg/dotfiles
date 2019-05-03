@@ -8,15 +8,15 @@ My dotfiles
 
 ## Download software
 
-- OSX Settings : `. set-defaults.sh`
-- Software : `. bootstrap.sh`
-- Config : `. config-logiciels.sh`
+- OSX Settings : `. osx/set-defaults.sh`
+- Software : `. osx/bootstrap.sh`
+- Config : `. osx/config-logiciels.sh`
 - mackup restore
 
 ## Terminal 101
 
-- Copy inputrc `rm ~/.inputrc; cp ~/websites/htdocs/dotfiles/bash/inputrc ~/.inputrc`
-- Copy tmux.conf `rm ~/.tmux.conf; cp ~/websites/htdocs/dotfiles/bash/tmux.conf ~/.tmux.conf`
+- Copy inputrc `rm ~/.inputrc; ln -s ~/websites/htdocs/dotfiles/bash/inputrc ~/.inputrc`
+- Copy tmux.conf `rm ~/.tmux.conf; ln -s ~/websites/htdocs/dotfiles/bash/tmux.conf ~/.tmux.conf`
 - Copy this into .bash_profile :
 
 ```

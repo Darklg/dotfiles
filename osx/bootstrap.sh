@@ -1,13 +1,5 @@
 #!/bin/bash
 
-#####################
-## Gems
-#####################
-
-gem install jekyll;
-gem install sass;
-gem install compass;
-
 ###################################
 ## Homebrew
 ###################################
@@ -17,6 +9,11 @@ command -v brew >/dev/null 2>&1 || { ruby -e "$(curl -fsSL https://raw.github.co
 
 # Update
 brew update;
+
+# Install ruby
+echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile;
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+
 
 # Add repos
 brew tap "caskroom/fonts"
@@ -36,7 +33,6 @@ brew install diff-so-fancy
 brew install ffmpeg;
 brew install geoip;
 brew install git;
-brew install homebrew/boneyard/lftp;
 brew install htop;
 brew install imagemagick;
 brew install mackup;
@@ -63,7 +59,7 @@ brew tap caskroom/versions
 # Utilities
 brew cask install 1password;
 brew cask install appcleaner;
-brew cask install betterzipql;
+brew cask install betterzip;
 brew cask install coconutbattery;
 brew cask install divvy;
 brew cask install fluid;
@@ -133,6 +129,14 @@ brew cask install font-ubuntu-mono-derivative-powerline;
 brew cleanup;
 brew cask cleanup;
 brew doctor;
+
+#####################
+## Gems
+#####################
+
+gem install jekyll;
+gem install sass;
+gem install compass;
 
 ###################################
 ## Node
