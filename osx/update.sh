@@ -32,7 +32,7 @@ brew cask upgrade;
 # CLEAN
 brew cleanup;
 brew doctor;
-brew prune;
+brew cleanup --prune-prefix;
 
 ###################################
 ## Microsoft Office
