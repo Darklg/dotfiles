@@ -93,6 +93,7 @@ brew cask install imagealpha;
 brew cask install imageoptim;
 brew cask install livereload;
 brew cask install mamp;
+brew cask install poedit;
 brew cask install sequel-pro;
 brew cask install sketch;
 brew cask install sublime-text;
