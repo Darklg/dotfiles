@@ -16,8 +16,9 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 
 # Add repos
-brew tap "caskroom/fonts"
-brew tap "caskroom/cask"
+brew tap "homebrew/cask"
+brew tap "homebrew/cask-versions"
+brew tap "homebrew/cask-fonts"
 
 # Cask
 brew install caskroom/cask/brew-cask;
@@ -54,13 +55,13 @@ brew install youtube-dl;
 #####################
 
 export HOMEBREW_CASK_OPTS=--appdir=/Applications;
-brew tap caskroom/versions
 
 # Utilities
 brew cask install 1password;
 brew cask install appcleaner;
 brew cask install betterzip;
 brew cask install coconutbattery;
+brew cask install dash;
 brew cask install divvy;
 brew cask install fluid;
 brew cask install free-ruler;
@@ -93,16 +94,16 @@ brew cask install imageoptim;
 brew cask install livereload;
 brew cask install mamp;
 brew cask install sequel-pro;
-brew cask install sublime-text3;
-brew cask install svg-cleaner;
+brew cask install sketch;
+brew cask install sublime-text;
+brew cask install svgcleaner;
 brew cask install textexpander;
-brew cask install todoist
 brew cask install tower;
 brew cask install transmit;
-brew cask install vagrant;
 brew cask install vagrant-manager;
-brew cask install virtualbox;
+brew cask install vagrant;
 brew cask install virtualbox-extension-pack;
+brew cask install virtualbox;
 
 # Browsers
 brew cask install google-chrome;
@@ -174,5 +175,6 @@ sudo mv wp-cli.phar /usr/local/bin/wp
 mas install 669840342; # Cashflows
 mas install 957734279; # TogglDesktop
 mas install 1278508951; # Trello
-mas install 880001334; # Reeder
+mas install 585829637; # Todoist
+mas install 1449412482; # Reeder
 mas install 568494494; # Pocket
