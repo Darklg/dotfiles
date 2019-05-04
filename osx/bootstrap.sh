@@ -106,6 +106,10 @@ brew cask install vagrant;
 brew cask install virtualbox-extension-pack;
 brew cask install virtualbox;
 
+# Big guyz
+brew cask install adobe-creative-cloud;
+brew cask install microsoft-office;
+
 # Browsers
 brew cask install google-chrome;
 brew cask install google-chrome-canary;
