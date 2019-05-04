@@ -18,6 +18,12 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Set the timezone; see `systemsetup -listtimezones` for other values
 systemsetup -settimezone "Europe/Paris" > /dev/null
 
+# Clock settings
+defaults write com.apple.menuextra.clock "DateFormat" -string "EEE d MMM '\\U00e0' HH:mm:ss"
+defaults write com.apple.menuextra.clock "FlashDateSeparators" -boolean False
+defaults write com.apple.speech.synthesis.general.prefs TimeAnnouncementPrefs -dict-add "TimeAnnouncementsEnabled" -bool true
+defaults write com.apple.speech.synthesis.general.prefs TimeAnnouncementPrefs -dict-add "TimeAnnouncementsIntervalIdentifier" -string "EveryHalfHourInterval"
+
 ##
 ## UX/UI/FINDER ##
 
@@ -73,6 +79,10 @@ defaults write com.apple.finder ShowPathBar -bool true
 # Finder: allow text selection in Quick Look
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
@@ -103,39 +113,6 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 ##
 ## DOCK ##
 
-# Enable spring loading for all Dock items
-defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
-
-# Show indicator lights for open applications in the Dock
-defaults write com.apple.dock show-process-indicators -bool true
-
-# Don’t animate opening applications from the Dock
-defaults write com.apple.dock launchanim -bool false
-
-# Speed up Mission Control animations
-defaults write com.apple.dock expose-animation-duration -float 0.1
-
-# Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
-
-# Enable highlight hover effect for the grid view of a stack (Dock)
-defaults write com.apple.dock mouse-over-hilite-stack -bool true
-
-# Set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 36
-
-# Remove the auto-hiding Dock delay
-defaults write com.apple.dock autohide-delay -float 0
-
-# Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool true
-
-# Make Dock icons of hidden applications translucent
-defaults write com.apple.dock showhidden -bool true
-
-# Create a stack with recently opened apps
-defaults write com.apple.dock persistent-others -array-add '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'
-
 # Hot corners
 # Possible values:
 #  0: no-op
@@ -161,7 +138,7 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 defaults write com.apple.dock wvous-tr-corner -int 4
 defaults write com.apple.dock wvous-tr-modifier -int 0
 
-# Top right screen corner → Mission Control
+# Top left screen corner → Mission Control
 defaults write com.apple.dock wvous-tl-corner -int 2
 defaults write com.apple.dock wvous-tl-modifier -int 0
 
@@ -174,6 +151,9 @@ defaults write com.apple.screencapture location ~/Dropbox/Screenshots/
 
 # Disable Screenshot shadow
 defaults write com.apple.screencapture disable-shadow -bool true
+
+# Hide thumbnail
+defaults write com.apple.screencapture "show-thumbnail" -bool false
 
 # Ensure PNG Use for screenshots
 defaults write com.apple.screencapture type -string "png"
@@ -191,7 +171,10 @@ defaults write com.apple.screencapture include-date -bool false
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 
 # Set a really fast key repeat.
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 1
+
+# Set a really short delay until key repeat.
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false

@@ -7,3 +7,4 @@ Gist.sublime-settings
 Package Control.merged-ca-bundle
 ColorPicker_osx_x64
 Package Control.user-ca-bundle
+*.swp
