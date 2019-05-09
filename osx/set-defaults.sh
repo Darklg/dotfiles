@@ -27,6 +27,9 @@ defaults write com.apple.speech.synthesis.general.prefs TimeAnnouncementPrefs -d
 ##
 ## UX/UI/FINDER ##
 
+# New windows open home path
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
+
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
