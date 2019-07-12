@@ -64,11 +64,13 @@ brew cask install coconutbattery;
 brew cask install dash;
 brew cask install divvy;
 brew cask install fluid;
+brew cask install fontplop;
 brew cask install free-ruler;
 brew cask install goofy;
 brew cask install grandperspective;
 brew cask install handbrake;
 brew cask install homebrew/cask-versions/java8
+brew cask install macdown;
 brew cask install onyx;
 brew cask install osxfuse;
 brew cask install qlcolorcode;
@@ -122,6 +124,7 @@ brew cask install vlc;
 
 # Libs & stuff
 brew cask install xquartz;
+brew cask install pdftotext;
 
 # Fonts
 brew cask install font-inconsolata;
