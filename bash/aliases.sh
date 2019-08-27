@@ -23,7 +23,6 @@ alias .....='cd ../../../..';
 alias hosts='sudo vim /etc/hosts';
 
 # PHP
-alias composer='php /Users/kevin/Websites/htdocs/composer.phar';
 alias phpunit='php /usr/local/bin/phpunit';
 alias php7='/Applications/MAMP/bin/php/php7.0.20/bin/php';
 
