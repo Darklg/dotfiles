@@ -69,9 +69,9 @@ dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
 ## It's over !
 ###################################
 
-osascript <<EOF
-tell app "System Events"
-    display alert "Please work"
-end tell
-EOF
+# osascript <<EOF
+# tell app "System Events"
+#     display alert "Please work"
+# end tell
+# EOF
 
