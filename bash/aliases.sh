@@ -70,6 +70,18 @@ alias ghpages='git checkout gh-pages && git rebase master && git checkout master
 alias giti='git gc && git pull --rebase && git push --all';
 alias gitisub='git pull --recurse-submodules && git submodule update --recursive';
 alias gitexp='git archive --format zip --output ../export.zip master && echo "Export ok !"';
+function gitrmsubmodule () {
+    if [[ -f ${1} ]]; then
+        echo "- This module does not exists";
+        return 0;
+    fi;
+    git config -f .gitmodules --remove-section submodule.${1};
+    git config -f .git/config --remove-section submodule.${1};
+    git add .gitmodules;
+    git rm --cached ${1};
+    rm -rf .git/modules/${1};
+    git commit -m "Git - Remove submodule ${1}";
+}
 
 # Thanks to
 # - http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
