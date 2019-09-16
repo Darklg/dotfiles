@@ -71,8 +71,16 @@ alias giti='git gc && git pull --rebase && git push --all';
 alias gitisub='git pull --recurse-submodules && git submodule update --recursive';
 alias gitexp='git archive --format zip --output ../export.zip master && echo "Export ok !"';
 function gitrmsubmodule () {
-    if [[ -f ${1} ]]; then
-        echo "- This module does not exists";
+    if [[ "${1: -1}" == '/' ]];then
+        echo "- Submodule path should not end with a '/'.";
+        return 0;
+    fi;
+    if [[ -z "${1}" ]]; then
+        echo "- Missing argument ! You should specify a submodule folder.";
+        return 0;
+    fi;
+    if [[ ! -d "${1}" ]]; then
+        echo "- The module ${1} does not exists";
         return 0;
     fi;
     git config -f .gitmodules --remove-section submodule.${1};
