@@ -5,15 +5,20 @@
 ## http://www.irradiatedsoftware.com/sizeup/
 ###################################
 
+_SOURCEDIR="$( dirname "${BASH_SOURCE[0]}" )/";
+
+# Screen settings
+. "${_SOURCEDIR}/inc/functions.sh";
+
 ###################################
 ## First, manually open all apps
 ###################################
 
-open /Applications/Utilities/Terminal.app;
-open /Applications/Notes.app;
+open /System/Applications/Utilities/Terminal.app;
+open /System/Applications/Notes.app;
 open /Applications/Tower.app;
 open /Applications/Google\ Chrome.app;
-open /Applications/Mail.app;
+open /System/Applications/Mail.app;
 open /Applications/Trello.app;
 open /Applications/Todoist.app;
 open /Applications/Slack.app;
@@ -24,30 +29,6 @@ open /Applications/Sublime\ Text.app;
 ###################################
 
 sleep 1;
-
-###################################
-## Set position for an app
-## This should not be edited.
-###################################
-
-dotfiles_position_app () {
-   osascript <<EOF
-tell application "$1"
-   activate
-   -- Send to correct monitor
-   tell application "SizeUp" to send to monitor $2
-   -- Wait a moment ...
-   delay 0.1
-   -- Position app
-   tell application "SizeUp" to $3
-   -- Wait a moment ...
-   delay 0.3
-end tell
-EOF
-}
-
-dotfiles_position_left_monitor_id=3;
-dotfiles_position_right_monitor_id=2;
 
 ###################################
 ## Position the apps
@@ -67,14 +48,3 @@ dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id} "do action L
 
 # Middle Screen
 dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
-
-###################################
-## It's over !
-###################################
-
-# osascript <<EOF
-# tell app "System Events"
-#     display alert "Please work"
-# end tell
-# EOF
-
