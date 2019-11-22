@@ -22,3 +22,5 @@ magento/media/catalog/product/cache
 pub/media
 .vscode
 .wakatime
+vendor_old
+vendor_old2
