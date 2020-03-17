@@ -23,3 +23,6 @@ export PATH=/usr/local/bin:$PATH
 
 # Display uptime
 uptime;
+
+# Hide bash depreciation warning
+export BASH_SILENCE_DEPRECATION_WARNING=1;
