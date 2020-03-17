@@ -58,7 +58,12 @@ alias reboot='sudo /sbin/reboot';
 alias poweroff='sudo /sbin/poweroff';
 alias halt='sudo /sbin/halt';
 alias shutdown='sudo /sbin/shutdown';
-alias suspend='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+alias suspend='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+alias faisdodo="osascript -e 'tell application \"System Events\" to sleep'";
+alias screenshotnow="screencapture -x ~/Dropbox/screenshot-current-1.jpg ~/Dropbox/screenshot-current-2.jpg ~/Dropbox/screenshot-current-3.jpg";
+
+# Vagrant
+alias vagrantstop="vagrant global-status | grep virtualbox | cut -c 1-9 | while read line; do echo \$line; vagrant halt \$line; done;"
 
 # Alias Git
 alias ga='git add -u . && git add .'
@@ -66,6 +71,7 @@ alias gfoire='git reset --hard HEAD'
 alias gitput='git stash && git pull && git push --all && git stash apply && git stash drop'
 alias gl='git log --pretty=format:"%Cred• %h%Creset%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset%n%s" --max-count=15 --reverse --date=short'
 alias gs='git status -s && git fetch'
+alias gitrmws='git add -u . && git add . && git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero | git stash save --keep-index --include-untracked'
 alias ghpages='git checkout gh-pages && git rebase master && git checkout master';
 alias giti='git gc && git pull --rebase && git push --all';
 alias gitisub='git pull --recurse-submodules && git submodule update --recursive';
