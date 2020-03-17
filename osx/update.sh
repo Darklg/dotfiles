@@ -5,7 +5,14 @@
 ###################################
 
 composer self-update;
-phpunit --self-update;
+
+###################################
+## Node
+###################################
+
+sudo npm install -g n;
+sudo npm cache clean -f;
+sudo n stable;
 
 ###################################
 ## NPM
@@ -18,8 +25,8 @@ npm install -g npm;
 ## RUBY
 ###################################
 
-gem update;
-gem cleanup;
+sudo gem update;
+sudo gem cleanup;
 
 ###################################
 ## HOMEBREW
