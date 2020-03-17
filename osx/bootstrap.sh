@@ -143,9 +143,10 @@ brew doctor;
 ## Gems
 #####################
 
-gem install jekyll;
-gem install sass;
-gem install compass;
+gem --user-install install jekyll;
+gem --user-install install sass;
+gem --user-install install compass;
+gem --user-install install wpscan;
 
 ###################################
 ## xcode
