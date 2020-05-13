@@ -73,10 +73,10 @@ else
     dotfiles_position_app "Notes" ${dotfiles_position_left_monitor_id} "move and resize to {100, 1420, 980, 480}";
 
     # Right Screen
-    dotfiles_position_app "Google Chrome" ${dotfiles_position_right_monitor_id} "do action Left";
-    dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "do action Right";
+    dotfiles_position_app "Google Chrome" 1 "do action Left";
+    dotfiles_position_app "Mail" 1 "do action Right";
 
 
     # Middle Screen
-    dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
+    dotfiles_position_app "Sublime Text" ${dotfiles_position_right_monitor_id} "do action Full Screen";
 fi;
