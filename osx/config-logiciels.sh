@@ -21,3 +21,9 @@ vagrant plugin install vagrant-bindfs
 vagrant plugin install vagrant-hostmanager
 vagrant plugin install vagrant-share
 vagrant plugin install vagrant-vbguest
+
+###################################
+## Git
+###################################
+
+git config --global pull.rebase true;
