@@ -11,10 +11,22 @@ _SOURCEDIR="$( dirname "${BASH_SOURCE[0]}" )/";
 . "${_SOURCEDIR}/inc/functions.sh";
 
 
+_QUESTION_LOC=$(cat <<EOF
+- Where are you ?
+- 1 : On the go ?
+- 2 : Home ?
+- 3 : Office ?
+[1/2/3] :
+EOF
+);
+
 # Ask location
-_LOCATION="home";
-read -p "- Are you at home ? [Y/n] : " _LOCATION_READ
-if [[ "${_LOCATION_READ}" == 'n' ]];then
+_LOCATION="onthego";
+read -p "${_QUESTION_LOC}" _LOCATION_READ
+if [[ "${_LOCATION_READ}" == '2' ]];then
+    _LOCATION="home";
+fi;
+if [[ "${_LOCATION_READ}" == '3' ]];then
     _LOCATION="office";
 fi;
 
@@ -23,26 +35,46 @@ fi;
 ###################################
 
 open /System/Applications/Notes.app;
-open /System/Applications/Mail.app;
-open /Applications/Vagrant\ Manager.app;
+open /Applications/Todoist.app;
 open /System/Applications/Utilities/Terminal.app;
 open /Applications/Tower.app;
 open /Applications/Google\ Chrome.app;
-open /Applications/Trello.app;
-open /Applications/Todoist.app;
-open /Applications/Slack.app;
 open /Applications/Sublime\ Text.app;
-open /System/Applications/Messages.app
+
+# Background Apps
+open /Applications/Vagrant\ Manager.app;
+open /Applications/CopyClip.app;
+
+if [[ "${_LOCATION}" != 'onthego' ]];then
+    open /Applications/Slack.app;
+    open /System/Applications/Mail.app;
+    open /Applications/Trello.app;
+    open /System/Applications/Messages.app
+fi;
 
 ###################################
 ## Too fast cowboy, wait a moment
 ###################################
 
-sleep 1;
+sleep 1.5;
 
 ###################################
 ## Position the apps
 ###################################
+
+if [[ "${_LOCATION}" == "onthego" ]];then
+
+    # Left Screen
+    dotfiles_position_app "Sublime Text" 1 "move and resize to {500, 0, 1420, 1200}";
+    dotfiles_position_app "Todoist" 1 "move and resize to {0, 0, 500, 600}";
+    dotfiles_position_app "Terminal" 1 "move and resize to {0, 601, 500, 580}";
+
+    # Right Screen
+    dotfiles_position_app "Google Chrome" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1280, 1200}";
+    dotfiles_position_app "Tower" ${dotfiles_position_right_monitor_id} "move and resize to {1281, 0, 639, 560}";
+    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1281, 561, 639, 600}";
+
+fi;
 
 if [[ "${_LOCATION}" == "office" ]];then
 
@@ -61,8 +93,9 @@ if [[ "${_LOCATION}" == "office" ]];then
 
     # Middle Screen
     dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
+fi;
 
-else
+if [[ "${_LOCATION}" == "office" ]];then
     # Left Screen
     dotfiles_position_app "Todoist" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 540, 600}";
     dotfiles_position_app "Trello" ${dotfiles_position_left_monitor_id} "move and resize to {540, 0, 540, 600}";
