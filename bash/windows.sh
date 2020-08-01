@@ -16,13 +16,13 @@ _QUESTION_LOC=$(cat <<EOF
 - 1 : On the go ?
 - 2 : Home ?
 - 3 : Office ?
-[1/2/3] :
+[1/2/3]
 EOF
 );
 
 # Ask location
 _LOCATION="onthego";
-read -p "${_QUESTION_LOC}" _LOCATION_READ
+read -p "${_QUESTION_LOC} : " _LOCATION_READ
 if [[ "${_LOCATION_READ}" == '2' ]];then
     _LOCATION="home";
 fi;
@@ -71,8 +71,8 @@ if [[ "${_LOCATION}" == "onthego" ]];then
 
     # Right Screen
     dotfiles_position_app "Google Chrome" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1280, 1200}";
-    dotfiles_position_app "Tower" ${dotfiles_position_right_monitor_id} "move and resize to {1281, 0, 639, 560}";
-    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1281, 561, 639, 600}";
+    dotfiles_position_app "Tower" ${dotfiles_position_right_monitor_id} "move and resize to {1281, 0, 639, 530}";
+    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1281, 531, 639, 530}";
 
 fi;
 
@@ -95,7 +95,7 @@ if [[ "${_LOCATION}" == "office" ]];then
     dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
 fi;
 
-if [[ "${_LOCATION}" == "office" ]];then
+if [[ "${_LOCATION}" == "home" ]];then
     # Left Screen
     dotfiles_position_app "Todoist" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 540, 600}";
     dotfiles_position_app "Trello" ${dotfiles_position_left_monitor_id} "move and resize to {540, 0, 540, 600}";
