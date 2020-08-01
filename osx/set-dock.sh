@@ -29,6 +29,8 @@ add_to_dock "/Applications/Tweetbot.app"
 add_to_dock "/Applications/MAMP PRO.app"
 add_to_dock "/Applications/Calendar.app"
 add_to_dock "/Applications/Notes.app"
+add_to_dock "/Applications/Xcode.app"
+add_to_dock "/Applications/Boop.app"
 add_to_dock "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 
 # Create a stack with recently opened apps
@@ -63,7 +65,6 @@ defaults write com.apple.dock autohide -bool true
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
-
 
 # Restart dock
 killall Dock;
