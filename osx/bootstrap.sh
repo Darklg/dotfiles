@@ -193,3 +193,4 @@ mas install 1278508951; # Trello
 mas install 585829637; # Todoist
 mas install 1449412482; # Reeder
 mas install 568494494; # Pocket
+mas install 1518425043; # Boop
