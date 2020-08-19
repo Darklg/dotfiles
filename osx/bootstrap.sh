@@ -88,6 +88,7 @@ brew cask install suspicious-package;
 brew cask install teamviewer;
 brew cask install the-unarchiver;
 brew cask install tripmode;
+brew cask install tuck;
 brew cask install tunnelbear;
 
 # Work

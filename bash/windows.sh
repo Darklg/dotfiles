@@ -2,14 +2,15 @@
 
 ###################################
 ## You need SizeUP ( Shareware )
-## http://www.irradiatedsoftware.com/sizeup/
+## https://www.irradiatedsoftware.com/sizeup/
+## And Tuck ( Shareware )
+## https://www.irradiatedsoftware.com/tuck/
 ###################################
 
 _SOURCEDIR="$( dirname "${BASH_SOURCE[0]}" )/";
 
 # Screen settings
 . "${_SOURCEDIR}/inc/functions.sh";
-
 
 _QUESTION_LOC=$(cat <<EOF
 - Where are you ?
@@ -79,19 +80,19 @@ fi;
 if [[ "${_LOCATION}" == "office" ]];then
 
     # Left Screen
-    dotfiles_position_app "Notes" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 640, 708}";
-    dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to {640, 0, 640, 708}";
-    dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "do action Lower Left";
-    dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "do action Right";
+    dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 708}";
+    dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to {0, 709, 960, 708}";
+    dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "move and resize to {961, 0, 1600, 1416}";
 
     # Right Screen
-    dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "do action Left";
-    dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id} "move and resize to {1280, 0, 640, 970}";
-    dotfiles_position_app "Trello" ${dotfiles_position_right_monitor_id} "move and resize to {1920, 0, 640, 490}";
-    dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to {1920, 491, 640, 480}";
-    dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id}  "move and resize to {1280, 970, 1280, 450}";
+    dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
+    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 472}";
+    dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 473, 960, 472}";
+    dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 945, 960, 472}";
 
     # Middle Screen
+    dotfiles_position_tuck_app "Trello" 1 "left";
+    dotfiles_position_tuck_app "Todoist" 1 "right";
     dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
 fi;
 

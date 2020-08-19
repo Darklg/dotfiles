@@ -2,7 +2,7 @@
 
 ###################################
 ## You need SizeUP ( Shareware )
-## http://www.irradiatedsoftware.com/sizeup/
+## https://www.irradiatedsoftware.com/sizeup/
 ###################################
 
 _SOURCEDIR="$( dirname "${BASH_SOURCE[0]}" )/";
