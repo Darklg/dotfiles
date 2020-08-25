@@ -11,6 +11,25 @@ _SOURCEDIR="$( dirname "${BASH_SOURCE[0]}" )/";
 
 # Screen settings
 . "${_SOURCEDIR}/inc/functions.sh";
+. "${_SOURCEDIR}/windows-local.sh";
+
+# Get Wi-Fi name
+_WIFI_NAME=$(/System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -I | awk -F: '/ SSID/{print $2}' | xargs);
+
+# Detect location
+_LOCATION="";
+if [[ "${_WIFI_NAME}" == "${_HOME_WIFI}" ]];then
+    _LOCATION="home";
+fi;
+if [[ "${_WIFI_NAME}" == "${_OFFICE_WIFI}" ]];then
+    _LOCATION="office";
+fi;
+
+if [[ "${_LOCATION}" != '' ]];then
+    echo "# Detected location : “${_LOCATION}”";
+else
+    _LOCATION="onthego";
+fi;
 
 _QUESTION_LOC=$(cat <<EOF
 - Where are you ?
@@ -22,7 +41,6 @@ EOF
 );
 
 # Ask location
-_LOCATION="onthego";
 read -p "${_QUESTION_LOC} : " _LOCATION_READ
 if [[ "${_LOCATION_READ}" == '2' ]];then
     _LOCATION="home";
@@ -30,6 +48,9 @@ fi;
 if [[ "${_LOCATION_READ}" == '3' ]];then
     _LOCATION="office";
 fi;
+
+echo "# Activated mode : “${_LOCATION}”";
+return 0;
 
 ###################################
 ## First, manually open all apps
@@ -86,9 +107,9 @@ if [[ "${_LOCATION}" == "office" ]];then
 
     # Right Screen
     dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
-    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 472}";
-    dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 473, 960, 472}";
-    dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 945, 960, 472}";
+    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 420}";
+    dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 421, 960, 340}";
+    dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
 
     # Middle Screen
     dotfiles_position_tuck_app "Trello" 1 "left";
