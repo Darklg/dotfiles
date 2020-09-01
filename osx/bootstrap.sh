@@ -44,6 +44,7 @@ brew install phpunit;
 brew install redis;
 brew install shellcheck;
 brew install speedtest-cli;
+brew install switchaudio-osx
 brew install tree;
 brew install ttfautohint fontforge --with-python
 brew install webpquicklook;

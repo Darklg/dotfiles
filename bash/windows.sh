@@ -50,7 +50,6 @@ if [[ "${_LOCATION_READ}" == '3' ]];then
 fi;
 
 echo "# Activated mode : “${_LOCATION}”";
-return 0;
 
 ###################################
 ## First, manually open all apps
@@ -81,9 +80,22 @@ fi;
 sleep 1.5;
 
 ###################################
+## Sound
+###################################
+
+echo "# Sound Settings";
+osascript -e 'set volume output volume 5';
+SwitchAudioSource -t input -s 'Micro MacBook Pro';
+# Default to Internal
+SwitchAudioSource -t output -s 'Haut-parleurs MacBook Pro';
+# Switch tot external if available
+SwitchAudioSource -t output -s 'Écouteurs externes';
+
+###################################
 ## Position the apps
 ###################################
 
+echo "# Windows Settings";
 if [[ "${_LOCATION}" == "onthego" ]];then
 
     # Left Screen
@@ -135,3 +147,5 @@ if [[ "${_LOCATION}" == "home" ]];then
     # Middle Screen
     dotfiles_position_app "Sublime Text" ${dotfiles_position_right_monitor_id} "do action Full Screen";
 fi;
+
+echo "# Success ! Let’s work !";
