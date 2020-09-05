@@ -44,6 +44,10 @@ echo '# Deleting caches';
 rm -rf ~/.composer/*.phar
 rm -rf ~/.composer/cache/
 
+# Trello
+rm -rf ~/Library/Containers/com.atlassian.trello/Data/Library/Application\ Support/Trello/Cache
+rm -rf ~/Library/Containers/com.atlassian.trello/Data/Library/Application\ Support/Trello/Code\ Cache
+
 # Homebrew
 rm -rf ~/Library/Caches/Homebrew/*.phar;
 rm -rf ~/Library/Caches/Homebrew/*.tar.gz;
@@ -52,6 +56,7 @@ rm -rf ~/Library/Caches/Homebrew/downloads/*;
 
 # Chrome
 rm -rf ~/Library/Caches/Google/Chrome/*/Cache
+rm -rf ~/Library/Application\ Support/Google/Chrome/*/Service\ Worker
 rm -rf ~/Library/Caches/Google/Chrome/*/Code\ Cache
 
 # Spotify
@@ -67,9 +72,17 @@ rm -rf ~/Library/Caches/Transmit/
 # Adobe
 rm -rf ~/Library/Caches/Adobe/Typequest/*
 
+# Goofy
+rm -rf ~/Library/Application\ Support/goofy-core/Code\ Cache/
+rm -rf ~/Library/Application\ Support/goofy-core/Cache/
+
+# Reeder
+rm -rf ~/Library/Containers/com.reederapp.macOS/Data/Library/Caches/*
+
 # Xcode
-rm -rf ~/Library/Developer/CoreSimulator/Caches/dyld/*/com.apple.CoreSimulator.SimRuntime.tvOS*
-rm -rf ~/Library/Developer/CoreSimulator/Caches/dyld/*/com.apple.CoreSimulator.SimRuntime.watchOS*
+rm -rf ~/Library/Developer/CoreSimulator/Caches/dyld/*
+rm -rf ~/Library/Developer/Xcode/watchOS\ DeviceSupport/*
+rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport/13.6*
 rm -rf ~/Library/Caches/com.apple.dt.Xcode/Downloads/Xcode*Watch*.dmg
 
 # Sublime Text
