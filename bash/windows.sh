@@ -84,11 +84,11 @@ sleep 1.5;
 ###################################
 
 echo "# Sound Settings";
-osascript -e 'set volume output volume 5';
+osascript -e 'set volume output volume 20';
 SwitchAudioSource -t input -s 'Micro MacBook Pro';
 # Default to Internal
 SwitchAudioSource -t output -s 'Haut-parleurs MacBook Pro';
-# Switch tot external if available
+# Switch to External if available
 SwitchAudioSource -t output -s 'Écouteurs externes';
 
 ###################################
