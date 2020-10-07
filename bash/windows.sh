@@ -67,6 +67,7 @@ open /Applications/Vagrant\ Manager.app;
 open /Applications/CopyClip.app;
 
 if [[ "${_LOCATION}" != 'onthego' ]];then
+    open /Applications/Spotify.app;
     open /Applications/Slack.app;
     open /System/Applications/Mail.app;
     open /Applications/Trello.app;
@@ -88,8 +89,11 @@ osascript -e 'set volume output volume 20';
 SwitchAudioSource -t input -s 'Micro MacBook Pro';
 # Default to Internal
 SwitchAudioSource -t output -s 'Haut-parleurs MacBook Pro';
-# Switch to External if available
+
+# Switch to alternate if availables
 SwitchAudioSource -t output -s 'Écouteurs externes';
+SwitchAudioSource -t input -s 'Bose QuietComfort 35';
+SwitchAudioSource -t output -s 'Bose QuietComfort 35';
 
 ###################################
 ## Position the apps
@@ -121,6 +125,7 @@ if [[ "${_LOCATION}" == "office" ]];then
     dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
     dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 420}";
     dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 421, 960, 340}";
+    dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
     dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
 
     # Middle Screen
