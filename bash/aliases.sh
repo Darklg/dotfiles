@@ -61,6 +61,7 @@ alias shutdown='sudo /sbin/shutdown';
 alias suspend='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 alias faisdodo="osascript -e 'tell application \"System Events\" to sleep'";
 alias screenshotnow="screencapture -x ~/Dropbox/screenshot-current-1.jpg ~/Dropbox/screenshot-current-2.jpg ~/Dropbox/screenshot-current-3.jpg";
+alias stopscreen="pmset displaysleepnow";
 
 # Vagrant
 alias vagrantstop="vagrant global-status | grep virtualbox | cut -c 1-9 | while read line; do echo \$line; vagrant halt \$line; done;"
