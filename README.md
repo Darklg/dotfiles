@@ -28,3 +28,13 @@ export PATH="/usr/local/sbin:$PATH";
 . ~/websites/htdocs/git/dotfiles/bash/aliases.sh
 . ~/websites/htdocs/git/dotfiles/bash/autocomplete.sh
 ```
+
+## Quick commands
+
+### Disable SSH password auth
+
+```
+sudo vim /etc/ssh/sshd_config
+ChallengeResponseAuthentication no
+PasswordAuthentication no
+```
