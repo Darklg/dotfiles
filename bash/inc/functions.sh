@@ -18,6 +18,7 @@ tell application "$1"
    delay 0.3
 end tell
 EOF
+echo "- $1";
 }
 
 dotfiles_position_tuck_app () {
@@ -44,6 +45,7 @@ tell application "$1"
    delay 0.3
 end tell
 EOF
+echo "- $1";
 }
 
 # Screen IDs

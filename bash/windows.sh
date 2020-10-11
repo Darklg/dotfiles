@@ -18,10 +18,7 @@ _WIFI_NAME=$(/System/Library/PrivateFrameworks/Apple80211.framework/Resources/ai
 
 # Detect location
 _LOCATION="";
-if [[ "${_WIFI_NAME}" == "${_HOME_WIFI}" ]];then
-    _LOCATION="home";
-fi;
-if [[ "${_WIFI_NAME}" == "${_OFFICE_WIFI}" ]];then
+if [[ "${_WIFI_NAME}" == "${_HOME_WIFI}" || "${_WIFI_NAME}" == "${_OFFICE_WIFI}" ]];then
     _LOCATION="office";
 fi;
 
@@ -34,8 +31,7 @@ fi;
 _QUESTION_LOC=$(cat <<EOF
 - Where are you ?
 - 1 : On the go ?
-- 2 : Home ?
-- 3 : Office ?
+- 2 : Home / Office ?
 [1/2/3]
 EOF
 );
@@ -43,9 +39,6 @@ EOF
 # Ask location
 read -p "${_QUESTION_LOC} : " _LOCATION_READ
 if [[ "${_LOCATION_READ}" == '2' ]];then
-    _LOCATION="home";
-fi;
-if [[ "${_LOCATION_READ}" == '3' ]];then
     _LOCATION="office";
 fi;
 
@@ -67,6 +60,7 @@ open /Applications/Vagrant\ Manager.app;
 open /Applications/CopyClip.app;
 
 if [[ "${_LOCATION}" != 'onthego' ]];then
+    open /Applications/Goofy.app;
     open /Applications/Spotify.app;
     open /Applications/Slack.app;
     open /System/Applications/Mail.app;
@@ -90,7 +84,7 @@ SwitchAudioSource -t input -s 'Micro MacBook Pro';
 # Default to Internal
 SwitchAudioSource -t output -s 'Haut-parleurs MacBook Pro';
 
-# Switch to alternate if availables
+# Switch to alternate if available
 SwitchAudioSource -t output -s 'Écouteurs externes';
 SwitchAudioSource -t input -s 'Bose QuietComfort 35';
 SwitchAudioSource -t output -s 'Bose QuietComfort 35';
@@ -124,6 +118,7 @@ if [[ "${_LOCATION}" == "office" ]];then
     # Right Screen
     dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
     dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 420}";
+    dotfiles_position_app "Goofy" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 421, 960, 340}";
     dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 421, 960, 340}";
     dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
     dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
@@ -134,23 +129,5 @@ if [[ "${_LOCATION}" == "office" ]];then
     dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
 fi;
 
-if [[ "${_LOCATION}" == "home" ]];then
-    # Left Screen
-    dotfiles_position_app "Todoist" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 540, 600}";
-    dotfiles_position_app "Trello" ${dotfiles_position_left_monitor_id} "move and resize to {540, 0, 540, 600}";
-    dotfiles_position_app "Messages" ${dotfiles_position_left_monitor_id} "move and resize to {0, 600, 880, 400}";
-    dotfiles_position_app "Slack" ${dotfiles_position_left_monitor_id} "move and resize to {200, 600, 880, 400}";
-    dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to {0, 1000, 1080, 420}";
-    dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to {0, 1420, 980, 480}";
-    dotfiles_position_app "Notes" ${dotfiles_position_left_monitor_id} "move and resize to {100, 1420, 980, 480}";
-
-    # Right Screen
-    dotfiles_position_app "Google Chrome" 1 "do action Left";
-    dotfiles_position_app "Mail" 1 "do action Right";
-
-
-    # Middle Screen
-    dotfiles_position_app "Sublime Text" ${dotfiles_position_right_monitor_id} "do action Full Screen";
-fi;
 
 echo "# Success ! Let’s work !";
