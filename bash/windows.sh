@@ -79,15 +79,27 @@ sleep 1.5;
 ###################################
 
 echo "# Sound Settings";
-osascript -e 'set volume output volume 20';
-SwitchAudioSource -t input -s 'Micro MacBook Pro';
-# Default to Internal
-SwitchAudioSource -t output -s 'Haut-parleurs MacBook Pro';
 
-# Switch to alternate if available
-SwitchAudioSource -t output -s 'Écouteurs externes';
-SwitchAudioSource -t input -s 'Bose QuietComfort 35';
-SwitchAudioSource -t output -s 'Bose QuietComfort 35';
+_DF_AUDIO_SOURCES=$(SwitchAudioSource -a);
+
+# Switch audio sources
+if [[ $_DF_AUDIO_SOURCES = *QuietComfort* ]]; then
+    osascript -e 'set volume output volume 40';
+    SwitchAudioSource -t input -s 'Bose QuietComfort 35';
+    SwitchAudioSource -t output -s 'Bose QuietComfort 35';
+elif [[ $_DF_AUDIO_SOURCES = *AirPods\ Pro* ]]; then
+    osascript -e 'set volume output volume 50';
+    SwitchAudioSource -t input -s 'AirPods Pro de Kévin';
+    SwitchAudioSource -t output -s 'AirPods Pro de Kévin';
+elif [[ $_DF_AUDIO_SOURCES = *Écouteurs\ externes* ]]; then
+    osascript -e 'set volume output volume 30';
+    SwitchAudioSource -t output -s 'Écouteurs externes';
+    SwitchAudioSource -t input -s 'Micro MacBook Pro';
+else
+    osascript -e 'set volume output volume 20';
+    SwitchAudioSource -t output -s 'Haut-parleurs MacBook Pro';
+    SwitchAudioSource -t input -s 'Micro MacBook Pro';
+fi;
 
 ###################################
 ## Position the apps
