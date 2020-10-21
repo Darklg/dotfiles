@@ -27,7 +27,7 @@ alias phpunit='php /usr/local/bin/phpunit';
 alias php7='/Applications/MAMP/bin/php/php7.0.20/bin/php';
 
 # Alias MySQL
-alias mysql='/Applications/MAMP/Library/bin/mysql'
+#alias mysql='/Applications/MAMP/Library/bin/mysql'
 alias mysqladmin='sudo /Applications/MAMP/Library/bin/mysqladmin'
 alias mysqlstop='sudo /Applications/MAMP/Library/bin/mysqladmin -u root -p shutdown'
 alias mysqlstart='sudo /Applications/MAMP/Library/bin/mysqld_safe'
