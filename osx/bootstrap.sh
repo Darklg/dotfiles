@@ -199,3 +199,4 @@ mas install 568494494;  # Pocket
 mas install 585829637;  # Todoist
 mas install 669840342;  # Cashflows
 mas install 957734279;  # TogglDesktop
+mas install 1518036000  # Sequel Ace
