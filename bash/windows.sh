@@ -13,12 +13,26 @@ _SOURCEDIR="$( dirname "${BASH_SOURCE[0]}" )/";
 . "${_SOURCEDIR}/inc/functions.sh";
 . "${_SOURCEDIR}/windows-local.sh";
 
+if [[ -z "${_OFFICE_WIFI}" ]];then
+    echo '- OFFICE_WIFI is not defined !';
+fi;
+
 # Get Wi-Fi name
 _WIFI_NAME=$(/System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -I | awk -F: '/ SSID/{print $2}' | xargs);
 
+# Get music status
+_MUSIC_IS_PLAYING="0";
+if [[ "$(pmset -g | grep ' sleep')" == *"coreaudiod"* ]]; then
+    echo '- Music is already playing';
+    _MUSIC_IS_PLAYING="1";
+fi;
+
 # Detect location
 _LOCATION="";
-if [[ "${_WIFI_NAME}" == "${_HOME_WIFI}" || "${_WIFI_NAME}" == "${_OFFICE_WIFI}" ]];then
+if [[ "${_WIFI_NAME}" == "${_HOME_WIFI}" ]];then
+    _LOCATION="home";
+fi;
+if [[ "${_WIFI_NAME}" == "${_OFFICE_WIFI}" ]];then
     _LOCATION="office";
 fi;
 
@@ -32,12 +46,15 @@ _QUESTION_LOC=$(cat <<EOF
 - Where are you ?
 - 1 : On the go ?
 - 2 : Home / Office ?
-[1/2/3]
+[1/2]
 EOF
 );
 
 # Ask location
 read -p "${_QUESTION_LOC} : " _LOCATION_READ
+if [[ "${_LOCATION_READ}" == '1' ]];then
+    _LOCATION="onthego";
+fi;
 if [[ "${_LOCATION_READ}" == '2' ]];then
     _LOCATION="office";
 fi;
@@ -120,7 +137,7 @@ if [[ "${_LOCATION}" == "onthego" ]];then
 
 fi;
 
-if [[ "${_LOCATION}" == "office" ]];then
+if [[ "${_LOCATION}" != "onthego" ]];then
 
     # Left Screen
     dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 708}";
@@ -129,17 +146,26 @@ if [[ "${_LOCATION}" == "office" ]];then
 
     # Right Screen
     dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
+    dotfiles_position_app "Trello" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 420}";
     dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 420}";
     dotfiles_position_app "Goofy" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 421, 960, 340}";
     dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 421, 960, 340}";
     dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
+    dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
     dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
 
     # Middle Screen
-    dotfiles_position_tuck_app "Trello" 1 "left";
-    dotfiles_position_tuck_app "Todoist" 1 "right";
+    # dotfiles_position_tuck_app "Trello" 1 "left";
+    # dotfiles_position_tuck_app "Todoist" 1 "right";
     dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
 fi;
 
+if [[ "${_MUSIC_IS_PLAYING}" == '0' ]]; then
+    osascript <<EOF
+tell application "Spotify"
+    play track "spotify:track:69kOkLUCkxIZYexIgSG8rq"
+end tell
+EOF
+fi;
 
 echo "# Success ! Let’s work !";
