@@ -142,6 +142,7 @@ if [[ "${_LOCATION}" != "onthego" ]];then
     # Left Screen
     dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 708}";
     dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to {0, 709, 960, 708}";
+    dotfiles_position_app "Todoist" ${dotfiles_position_left_monitor_id} "move and resize to {0, 709, 960, 708}";
     dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "move and resize to {961, 0, 1600, 1416}";
 
     # Right Screen
@@ -151,7 +152,6 @@ if [[ "${_LOCATION}" != "onthego" ]];then
     dotfiles_position_app "Goofy" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 421, 960, 340}";
     dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 421, 960, 340}";
     dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
-    dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
     dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
 
     # Middle Screen
