@@ -69,15 +69,16 @@ open /System/Applications/Notes.app;
 open /Applications/Todoist.app;
 open /System/Applications/Utilities/Terminal.app;
 open /Applications/Tower.app;
+open /Applications/Discord.app;
 open /Applications/Google\ Chrome.app;
 open /Applications/Sublime\ Text.app;
 
 # Background Apps
-open /Applications/Vagrant\ Manager.app;
 open /Applications/CopyClip.app;
 
 if [[ "${_LOCATION}" != 'onthego' ]];then
     open /Applications/Goofy.app;
+    open /Applications/TogglDesktop.app;
     open /Applications/Spotify.app;
     open /Applications/Slack.app;
     open /System/Applications/Mail.app;
@@ -140,6 +141,7 @@ fi;
 if [[ "${_LOCATION}" != "onthego" ]];then
 
     # Left Screen
+    dotfiles_position_app "TogglDesktop" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 708}";
     dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 708}";
     dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to {0, 709, 960, 708}";
     dotfiles_position_app "Todoist" ${dotfiles_position_left_monitor_id} "move and resize to {0, 709, 960, 708}";
@@ -151,8 +153,9 @@ if [[ "${_LOCATION}" != "onthego" ]];then
     dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 420}";
     dotfiles_position_app "Goofy" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 421, 960, 340}";
     dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 421, 960, 340}";
-    dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
+    dotfiles_position_app "Discord" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
     dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
+    dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
 
     # Middle Screen
     # dotfiles_position_tuck_app "Trello" 1 "left";
