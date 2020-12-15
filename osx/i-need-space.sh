@@ -40,6 +40,9 @@ rm -rf ~/Library/Logs/PDApp*;
 
 echo '# Deleting caches';
 
+# Apple Books
+rm -rf ~/Library/Containers/com.apple.iBooksX/Data/Library/Caches*
+
 # Composer
 rm -rf ~/.composer/*.phar
 rm -rf ~/.composer/cache/
@@ -71,6 +74,7 @@ rm -rf ~/Library/Caches/Transmit/
 
 # Adobe
 rm -rf ~/Library/Caches/Adobe/Typequest/*
+rm -rf ~/Library/Caches/Adobe/CCX*
 
 # Goofy
 rm -rf ~/Library/Application\ Support/goofy-core/Code\ Cache/
