@@ -104,10 +104,6 @@ brew cask install sublime-text;
 brew cask install textexpander;
 brew cask install tower;
 brew cask install transmit;
-brew cask install vagrant-manager;
-brew cask install vagrant;
-brew cask install virtualbox-extension-pack;
-brew cask install virtualbox;
 
 # Big guyz
 brew cask install adobe-creative-cloud;
