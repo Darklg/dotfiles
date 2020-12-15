@@ -69,7 +69,6 @@ open /System/Applications/Notes.app;
 open /Applications/Todoist.app;
 open /System/Applications/Utilities/Terminal.app;
 open /Applications/Tower.app;
-open /Applications/Discord.app;
 open /Applications/Google\ Chrome.app;
 open /Applications/Sublime\ Text.app;
 
@@ -153,7 +152,6 @@ if [[ "${_LOCATION}" != "onthego" ]];then
     dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 420}";
     dotfiles_position_app "Goofy" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 421, 960, 340}";
     dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 421, 960, 340}";
-    dotfiles_position_app "Discord" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
     dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
     dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
 

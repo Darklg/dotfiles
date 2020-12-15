@@ -11,7 +11,7 @@ tell application "$1"
    -- Send to correct monitor
    tell application "SizeUp" to send to monitor $2
    -- Wait a moment ...
-   delay 0.1
+   delay 0.2
    -- Position app
    tell application "SizeUp" to $3
    -- Wait a moment ...
