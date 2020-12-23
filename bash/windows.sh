@@ -168,7 +168,11 @@ fi;
 if [[ "${_MUSIC_IS_PLAYING}" == '0' ]]; then
     osascript <<EOF
 tell application "Spotify"
-    play track "spotify:track:69kOkLUCkxIZYexIgSG8rq"
+    if shuffling is false then
+        set shuffling to true
+    end if
+    play track "spotify:playlist:4TnhaaEMZ5g7mpglHjKSHK"
+    next track
 end tell
 EOF
 fi;
