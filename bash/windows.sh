@@ -83,6 +83,8 @@ if [[ "${_LOCATION}" != 'onthego' ]];then
     open /System/Applications/Mail.app;
     open /Applications/Trello.app;
     open /System/Applications/Messages.app
+    open ~/Applications/LCDW.app;
+    open ~/Applications/GrttSlack.app;
 fi;
 
 ###################################
@@ -152,6 +154,8 @@ if [[ "${_LOCATION}" != "onthego" ]];then
     dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 420}";
     dotfiles_position_app "Goofy" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 421, 960, 340}";
     dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 421, 960, 340}";
+    dotfiles_position_app "LCDW" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
+    dotfiles_position_app "GrttSlack" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
     dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
     dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
 
