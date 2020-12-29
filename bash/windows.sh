@@ -72,9 +72,6 @@ open /Applications/Tower.app;
 open /Applications/Google\ Chrome.app;
 open /Applications/Sublime\ Text.app;
 
-# Background Apps
-open /Applications/CopyClip.app;
-
 if [[ "${_LOCATION}" != 'onthego' ]];then
     open /Applications/Goofy.app;
     open /Applications/TogglDesktop.app;
