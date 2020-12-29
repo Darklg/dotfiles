@@ -48,10 +48,6 @@ EOF
 echo "- $1";
 }
 
-# Screen IDs
-dotfiles_position_left_monitor_id=3;
-dotfiles_position_right_monitor_id=2;
-
 # Go to browser URL
 dotfiles_browser_go_to_url () {
    osascript <<EOF
