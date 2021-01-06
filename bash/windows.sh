@@ -9,6 +9,10 @@
 
 _SOURCEDIR="$( dirname "${BASH_SOURCE[0]}" )/";
 
+
+# Get Wi-Fi name
+_WIFI_NAME=$(/System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -I | awk -F: '/ SSID/{print $2}' | xargs);
+
 # Screen settings
 . "${_SOURCEDIR}/inc/functions.sh";
 . "${_SOURCEDIR}/windows-local.sh";
@@ -16,9 +20,6 @@ _SOURCEDIR="$( dirname "${BASH_SOURCE[0]}" )/";
 if [[ -z "${_OFFICE_WIFI}" ]];then
     echo '- OFFICE_WIFI is not defined !';
 fi;
-
-# Get Wi-Fi name
-_WIFI_NAME=$(/System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -I | awk -F: '/ SSID/{print $2}' | xargs);
 
 # Get music status
 _MUSIC_IS_PLAYING="0";
