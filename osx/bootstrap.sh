@@ -58,80 +58,80 @@ brew install youtube-dl;
 export HOMEBREW_CASK_OPTS=--appdir=/Applications;
 
 # Utilities
-brew cask install 1password;
-brew cask install appcleaner;
-brew cask install betterzip;
-brew cask install calibre;
-brew cask install coconutbattery;
-brew cask install copyq;
-brew cask install dash;
-brew cask install divvy;
-brew cask install fluid;
-brew cask install fontplop;
-brew cask install free-ruler;
-brew cask install goofy;
-brew cask install grandperspective;
-brew cask install hazel;
-brew cask install handbrake;
-brew cask install homebrew/cask-versions/java8
-brew cask install macdown;
-brew cask install onyx;
-brew cask install qlimagesize;
-brew cask install qlmarkdown;
-brew cask install qlprettypatch;
-brew cask install qlvideo;
-brew cask install quicklook-csv;
-brew cask install quicklook-json;
-brew cask install quicklookase;
-brew cask install qxmledit;
-brew cask install sizeup;
-brew cask install skype;
-brew cask install slack;
-brew cask install suspicious-package;
-brew cask install teamviewer;
-brew cask install the-unarchiver;
-brew cask install tuck;
-brew cask install tunnelbear;
-brew cask install tunnelblick;
+brew install --cask 1password;
+brew install --cask appcleaner;
+brew install --cask betterzip;
+brew install --cask calibre;
+brew install --cask coconutbattery;
+brew install --cask copyq;
+brew install --cask dash;
+brew install --cask divvy;
+brew install --cask fluid;
+brew install --cask fontplop;
+brew install --cask free-ruler;
+brew install --cask goofy;
+brew install --cask grandperspective;
+brew install --cask hazel;
+brew install --cask handbrake;
+brew install --cask homebrew/cask-versions/java8
+brew install --cask macdown;
+brew install --cask onyx;
+brew install --cask qlimagesize;
+brew install --cask qlmarkdown;
+brew install --cask qlprettypatch;
+brew install --cask qlvideo;
+brew install --cask quicklook-csv;
+brew install --cask quicklook-json;
+brew install --cask quicklookase;
+brew install --cask qxmledit;
+brew install --cask sizeup;
+brew install --cask skype;
+brew install --cask slack;
+brew install --cask suspicious-package;
+brew install --cask teamviewer;
+brew install --cask the-unarchiver;
+brew install --cask tuck;
+brew install --cask tunnelbear;
+brew install --cask tunnelblick;
 
 # Work
-brew cask install imagealpha;
-brew cask install inkscape;
-brew cask install imageoptim;
-brew cask install livereload;
-brew cask install svgcleaner;
-brew cask install mamp;
-brew cask install poedit;
-brew cask install responsively;
-brew cask install sequel-pro;
-brew cask install sketch;
-brew cask install sublime-text;
-brew cask install textexpander;
-brew cask install tower;
-brew cask install transmit;
+brew install --cask imagealpha;
+brew install --cask imageoptim;
+brew install --cask inkscape;
+brew install --cask livereload;
+brew install --cask poedit;
+brew install --cask postman;
+brew install --cask responsively;
+brew install --cask sequel-pro;
+brew install --cask sketch;
+brew install --cask sublime-text;
+brew install --cask svgcleaner;
+brew install --cask textexpander;
+brew install --cask tower;
+brew install --cask transmit;
 
 # Big guyz
-brew cask install adobe-creative-cloud;
-brew cask install microsoft-office;
+brew install --cask adobe-creative-cloud;
+brew install --cask microsoft-office;
 
 # Browsers
-brew cask install google-chrome;
-brew cask install google-chrome-canary;
-brew cask install firefox;
-brew cask install firefox-nightly;
+brew install --cask google-chrome;
+brew install --cask google-chrome-canary;
+brew install --cask firefox;
+brew install --cask firefox-nightly;
 
 # Medias
-brew cask install spotify;
-brew cask install vlc;
+brew install --cask spotify;
+brew install --cask vlc;
 
 # Libs & stuff
-brew cask install xquartz;
-brew cask install pdftotext;
+brew install --cask xquartz;
+brew install --cask pdftotext;
 
 # Fonts
-brew cask install font-inconsolata;
-brew cask install font-ubuntu;
-brew cask install font-ubuntu-mono-derivative-powerline;
+brew install --cask font-inconsolata;
+brew install --cask font-ubuntu;
+brew install --cask font-ubuntu-mono-derivative-powerline;
 
 ###################################
 ## Cleanup
