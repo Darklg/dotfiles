@@ -67,6 +67,9 @@ defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 # Remove the spring loading delay for directories
 defaults write NSGlobalDomain com.apple.springing.delay -float 0
 
+# Disable workspaces animations
+defaults write com.apple.dock workspaces-swoosh-animation-off -bool YES
+
 # no .DS_Store on network
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
