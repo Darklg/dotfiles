@@ -81,8 +81,6 @@ if [[ "${_LOCATION}" != 'onthego' ]];then
     open /System/Applications/Mail.app;
     open /Applications/Trello.app;
     open /System/Applications/Messages.app
-    open ~/Applications/LCDW.app;
-    open ~/Applications/GrttSlack.app;
 fi;
 
 ###################################
@@ -148,14 +146,12 @@ if [[ "${_LOCATION}" != "onthego" ]];then
 
     # Right Screen
     dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
-    dotfiles_position_app "Trello" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 420}";
-    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 420}";
-    dotfiles_position_app "Goofy" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 421, 960, 340}";
-    dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 421, 960, 340}";
-    dotfiles_position_app "LCDW" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
-    dotfiles_position_app "GrttSlack" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
-    dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
-    dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id}  "move and resize to {1600, 761, 960, 655}";
+    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 480, 708}";
+    dotfiles_position_app "Goofy" ${dotfiles_position_right_monitor_id} "move and resize to {2081, 0, 480, 708}";
+    dotfiles_position_app "Trello" ${dotfiles_position_right_monitor_id} "move and resize to {2081, 0, 480, 708}";
+    dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 708, 960, 708}";
+    dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 708, 960, 708}";
+    dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 708, 960, 708}";
 
     # Middle Screen
     # dotfiles_position_tuck_app "Trello" 1 "left";
