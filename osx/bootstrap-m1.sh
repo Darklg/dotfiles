@@ -102,11 +102,6 @@ brew install --cask vlc;
 # Libs & stuff
 brew install --cask pdftotext;
 
-# Fonts
-brew install --cask font-inconsolata;
-brew install --cask font-ubuntu;
-brew install --cask font-ubuntu-mono-derivative-powerline;
-
 ###################################
 ## Cleanup
 ###################################

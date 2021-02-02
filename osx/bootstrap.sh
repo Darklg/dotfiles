@@ -124,11 +124,6 @@ brew install --cask vlc;
 brew install --cask xquartz;
 brew install --cask pdftotext;
 
-# Fonts
-brew install --cask font-inconsolata;
-brew install --cask font-ubuntu;
-brew install --cask font-ubuntu-mono-derivative-powerline;
-
 ###################################
 ## Cleanup
 ###################################
@@ -136,16 +131,6 @@ brew install --cask font-ubuntu-mono-derivative-powerline;
 brew cleanup;
 brew cask cleanup;
 brew doctor;
-
-#####################
-## Gems
-#####################
-
-gem --user-install install jekyll;
-gem --user-install install sass;
-gem --user-install install compass;
-gem --user-install install wpscan;
-
 ###################################
 ## xcode
 ###################################
@@ -162,15 +147,18 @@ command -v node >/dev/null 2>&1 || { brew install node; }
 # Update
 npm update -g --quiet;
 
+# Settings
 npm config set cache-min 9999999;
 
 #####################
 # Node modules
 #####################
 
-# grunt
-command -v grunt >/dev/null 2>&1 || { npm install -g grunt-cli;npm install -g grunt; }
-npm install -g speedline;
+# Speedline
+npm install --global speedline;
+
+# Gulp
+npm install --global gulp-cli
 
 ###################################
 ## Phar
