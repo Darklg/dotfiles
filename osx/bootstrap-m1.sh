@@ -66,6 +66,7 @@ brew install --cask grandperspective;
 brew install --cask hazel;
 brew install --cask handbrake;
 brew install --cask macdown;
+brew install --cask setapp;
 brew install --cask sizeup;
 brew install --cask skype;
 brew install --cask slack;
@@ -90,6 +91,7 @@ brew install --cask svgcleaner;
 brew install --cask textexpander;
 brew install --cask tower;
 brew install --cask transmit;
+brew install --cask zeplin;
 
 # Browsers
 brew install --cask google-chrome;

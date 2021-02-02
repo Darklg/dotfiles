@@ -84,6 +84,7 @@ brew install --cask quicklook-csv;
 brew install --cask quicklook-json;
 brew install --cask quicklookase;
 brew install --cask qxmledit;
+brew install --cask setapp;
 brew install --cask sizeup;
 brew install --cask skype;
 brew install --cask slack;
@@ -109,6 +110,7 @@ brew install --cask svgcleaner;
 brew install --cask textexpander;
 brew install --cask tower;
 brew install --cask transmit;
+brew install --cask zeplin;
 
 # Browsers
 brew install --cask google-chrome;
