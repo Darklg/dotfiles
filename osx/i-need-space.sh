@@ -62,6 +62,9 @@ rm -rf ~/Library/Caches/Google/Chrome/*/Cache
 rm -rf ~/Library/Application\ Support/Google/Chrome/*/Service\ Worker
 rm -rf ~/Library/Caches/Google/Chrome/*/Code\ Cache
 
+# Safari
+rm -rf  ~/Library/Containers/com.apple.Safari/Data/Library/Caches/com.apple.Safari/*
+
 # Spotify
 rm -rf ~/Library/Caches/com.spotify.client/*
 
@@ -87,7 +90,14 @@ rm -rf ~/Library/Containers/com.reederapp.macOS/Data/Library/Caches/*
 rm -rf ~/Library/Developer/CoreSimulator/Caches/dyld/*
 rm -rf ~/Library/Developer/Xcode/watchOS\ DeviceSupport/*
 rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport/13.6*
+rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport/14.0*
+rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport/14.1*
+rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport/14.2*
+rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport/14.3*
 rm -rf ~/Library/Caches/com.apple.dt.Xcode/Downloads/Xcode*Watch*.dmg
+
+# Sublime Text
+rm -rf ~/Library/Application\ Support/discord/Cache/*
 
 # Sublime Text
 rm -rf ~/Library/Application\ Support/Sublime\ Text\ 3/Backup/*
@@ -97,6 +107,9 @@ rm -rf ~/Library/Application\ Support/Slack/logs
 rm -rf ~/Library/Application\ Support/Slack/Cache
 rm -rf ~/Library/Application\ Support/Slack/Code\ Cache
 rm -rf ~/Library/Application\ Support/Slack/Service\ Worker/CacheStorage
+
+# Fluid
+rm -rf ~/Library/Caches/com.fluidapp.FluidApp2.*
 
 ###################################
 ## Various
