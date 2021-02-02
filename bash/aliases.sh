@@ -22,11 +22,6 @@ alias ....='cd ../../..';
 alias .....='cd ../../../..';
 alias hosts='sudo vim /etc/hosts';
 
-# PHP
-alias phpunit='php /usr/local/bin/phpunit';
-alias php7='/usr/local/bin/php';
-alias php='/usr/local/bin/php';
-
 # Alias MySQL
 #alias mysql='/Applications/MAMP/Library/bin/mysql'
 alias mysqladmin='sudo /Applications/MAMP/Library/bin/mysqladmin'
