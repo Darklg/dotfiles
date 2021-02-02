@@ -110,10 +110,6 @@ brew install --cask textexpander;
 brew install --cask tower;
 brew install --cask transmit;
 
-# Big guyz
-brew install --cask adobe-creative-cloud;
-brew install --cask microsoft-office;
-
 # Browsers
 brew install --cask google-chrome;
 brew install --cask google-chrome-canary;
