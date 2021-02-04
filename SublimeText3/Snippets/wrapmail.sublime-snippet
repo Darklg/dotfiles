@@ -1,7 +1,0 @@
-<snippet>
-    <content><![CDATA[<a href="mailto:$SELECTION">$SELECTION</a>]]></content>
-    <!-- Optional: Tab trigger to activate the snippet -->
-    <tabTrigger>wrapmail</tabTrigger>
-    <!-- Optional: Description to show in the menu -->
-    <description>Wrap in mail</description>
-</snippet>
