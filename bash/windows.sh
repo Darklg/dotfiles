@@ -66,14 +66,14 @@ echo "# Activated mode : “${_LOCATION}”";
 ## First, manually open all apps
 ###################################
 
-open /System/Applications/Notes.app;
 open /Applications/Todoist.app;
 open /System/Applications/Utilities/Terminal.app;
-open /Applications/Tower.app;
 open /Applications/Google\ Chrome.app;
 open /Applications/Sublime\ Text.app;
 
 if [[ "${_LOCATION}" != 'onthego' ]];then
+    open /Applications/Tower.app;
+    open /System/Applications/Notes.app;
     open /Applications/Goofy.app;
     open /Applications/TogglDesktop.app;
     open /Applications/Spotify.app;
@@ -124,14 +124,12 @@ echo "# Windows Settings";
 if [[ "${_LOCATION}" == "onthego" ]];then
 
     # Left Screen
-    dotfiles_position_app "Sublime Text" 1 "move and resize to {500, 0, 1420, 1200}";
-    dotfiles_position_app "Todoist" 1 "move and resize to {0, 0, 500, 600}";
-    dotfiles_position_app "Terminal" 1 "move and resize to {0, 601, 500, 580}";
+    dotfiles_position_app "Sublime Text" 1 "move and resize to {0, 0, 1680, 1025}";
 
     # Right Screen
     dotfiles_position_app "Google Chrome" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1280, 1200}";
-    dotfiles_position_app "Tower" ${dotfiles_position_right_monitor_id} "move and resize to {1281, 0, 639, 530}";
-    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1281, 531, 639, 530}";
+    dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id} "move and resize to {1281, 0, 639, 530}";
+    dotfiles_position_app "Terminal" ${dotfiles_position_right_monitor_id} "move and resize to {1281, 531, 639, 530}";
 
 fi;
 
@@ -159,7 +157,7 @@ if [[ "${_LOCATION}" != "onthego" ]];then
     dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
 fi;
 
-if [[ "${_MUSIC_IS_PLAYING}" == '0' ]]; then
+if [[ "${_MUSIC_IS_PLAYING}" == '0' && "${_LOCATION}" != "onthego" ]]; then
     osascript <<EOF
 tell application "Spotify"
     if shuffling is false then
