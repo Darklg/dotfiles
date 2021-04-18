@@ -136,10 +136,10 @@ fi;
 if [[ "${_LOCATION}" != "onthego" ]];then
 
     # Left Screen
-    dotfiles_position_app "TogglDesktop" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 708}";
-    dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 708}";
-    dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to {0, 709, 960, 708}";
-    dotfiles_position_app "Todoist" ${dotfiles_position_left_monitor_id} "move and resize to {0, 709, 960, 708}";
+    dotfiles_position_app "TogglDesktop" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
+    dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
+    dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to {0, 549, 960, 866}";
+    dotfiles_position_app "Todoist" ${dotfiles_position_left_monitor_id} "move and resize to {0, 549, 960, 866}";
     dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "move and resize to {961, 0, 1600, 1416}";
 
     # Right Screen
