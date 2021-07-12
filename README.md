@@ -38,3 +38,19 @@ sudo vim /etc/ssh/sshd_config
 ChallengeResponseAuthentication no
 PasswordAuthentication no
 ```
+
+### Sync fonts to Dropbox
+
+```
+cd ~/Library;
+sudo mv Fonts ~/Dropbox/work;
+ln -s ~/Dropbox/work/Fonts;
+```
+
+### Sync fonts from Dropbox
+
+```
+cd ~/Library;
+sudo rm -r Fonts;
+ln -s ~/Dropbox/work/Fonts;
+```
