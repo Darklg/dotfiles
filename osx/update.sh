@@ -10,6 +10,7 @@ composer self-update;
 ## Node
 ###################################
 
+sudo chown -R $USER:$(id -gn $USER) /Users/kevin/.config
 sudo chown -R $USER /usr/local/lib/node_modules;
 sudo n stable;
 sudo npm install -g n;
