@@ -34,4 +34,6 @@ brew cleanup --prune-prefix;
 ## Mac
 ###################################
 
+mas outdated;
+mas upgrade;
 softwareupdate --install --all --force --verbose;
