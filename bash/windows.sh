@@ -106,6 +106,10 @@ elif [[ $_DF_AUDIO_SOURCES = *AirPods\ Pro* ]]; then
     osascript -e 'set volume output volume 50';
     SwitchAudioSource -t input -s 'AirPods Pro de Kévin';
     SwitchAudioSource -t output -s 'AirPods Pro de Kévin';
+elif [[ $_DF_AUDIO_SOURCES = *AirPods\ Max* ]]; then
+    osascript -e 'set volume output volume 50';
+    SwitchAudioSource -t input -s 'AirPods Max de Kévin';
+    SwitchAudioSource -t output -s 'AirPods Max de Kévin';
 elif [[ $_DF_AUDIO_SOURCES = *Écouteurs\ externes* ]]; then
     osascript -e 'set volume output volume 30';
     SwitchAudioSource -t output -s 'Écouteurs externes';
