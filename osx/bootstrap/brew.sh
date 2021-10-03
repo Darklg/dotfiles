@@ -71,6 +71,7 @@ brew install --cask sizeup;
 brew install --cask slack;
 brew install --cask suspicious-package;
 brew install --cask teamviewer;
+brew install --cask timemachineeditor;
 brew install --cask the-unarchiver;
 brew install --cask tuck;
 brew install --cask tunnelbear;
