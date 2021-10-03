@@ -163,7 +163,7 @@ tell application "Spotify"
     if shuffling is false then
         set shuffling to true
     end if
-    play track "spotify:playlist:4uLzTvWs5po5MkM4blUWc2"
+    play track "spotify:playlist:0V8a5mT63fx7RrLmbFXtA1"
     next track
 end tell
 EOF
