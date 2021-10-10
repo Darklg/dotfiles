@@ -55,7 +55,6 @@ brew install --cask appcleaner;
 brew install --cask betterzip;
 brew install --cask calibre;
 brew install --cask coconutbattery;
-brew install --cask copyq;
 brew install --cask dash;
 brew install --cask divvy;
 brew install --cask fluid;
@@ -80,9 +79,9 @@ brew install --cask tunnelblick;
 # Work
 brew install --cask imagealpha;
 brew install --cask imageoptim;
+brew install --cask insomnia;
 brew install --cask inkscape;
 brew install --cask poedit;
-brew install --cask postman;
 brew install --cask responsively;
 brew install --cask sequel-pro;
 brew install --cask sketch;
