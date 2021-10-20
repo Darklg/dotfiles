@@ -102,6 +102,10 @@ if [[ $_DF_AUDIO_SOURCES = *QuietComfort* ]]; then
     osascript -e 'set volume output volume 40';
     SwitchAudioSource -t input -s 'Bose QuietComfort 35';
     SwitchAudioSource -t output -s 'Bose QuietComfort 35';
+elif [[ $_DF_AUDIO_SOURCES = *Realtek\ USB* ]]; then
+    osascript -e 'set volume output volume 50';
+    SwitchAudioSource -t input -s 'Micro MacBook Pro';
+    SwitchAudioSource -t output -s 'Realtek USB2.0 Audio';
 elif [[ $_DF_AUDIO_SOURCES = *AirPods\ Pro* ]]; then
     osascript -e 'set volume output volume 50';
     SwitchAudioSource -t input -s 'AirPods Pro de Kévin';
