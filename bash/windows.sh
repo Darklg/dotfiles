@@ -70,9 +70,9 @@ open /Applications/Todoist.app;
 open /System/Applications/Utilities/Terminal.app;
 open /Applications/Google\ Chrome.app;
 open /Applications/Sublime\ Text.app;
+open /Applications/Tower.app;
 
 if [[ "${_LOCATION}" != 'onthego' ]];then
-    open /Applications/Tower.app;
     open /System/Applications/Notes.app;
     open /Applications/Goofy.app;
     open /Applications/TogglDesktop.app;
@@ -139,6 +139,7 @@ if [[ "${_LOCATION}" == "onthego" ]];then
     dotfiles_position_app "Google Chrome" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1280, 1200}";
     dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id} "move and resize to {1281, 0, 639, 530}";
     dotfiles_position_app "Terminal" ${dotfiles_position_right_monitor_id} "move and resize to {1281, 531, 639, 530}";
+    dotfiles_position_app "Tower" ${dotfiles_position_right_monitor_id} "move and resize to {1281, 531, 639, 530}";
 
 fi;
 
