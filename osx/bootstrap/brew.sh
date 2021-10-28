@@ -52,7 +52,6 @@ export HOMEBREW_CASK_OPTS=--appdir=/Applications;
 # Utilities
 brew install --cask 1password;
 brew install --cask appcleaner;
-brew install --cask betterzip;
 brew install --cask calibre;
 brew install --cask coconutbattery;
 brew install --cask dash;
@@ -60,8 +59,6 @@ brew install --cask divvy;
 brew install --cask fluid;
 brew install --cask fontplop;
 brew install --cask goofy;
-brew install --cask grandperspective;
-brew install --cask hazel;
 brew install --cask handbrake;
 brew install --cask macdown;
 brew install --cask maestral;
