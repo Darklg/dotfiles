@@ -17,6 +17,9 @@ npm config set cache-min 9999999;
 # Node modules
 #####################
 
+# Yarn
+npm install -g yarn;
+
 # Speedline
 npm install -g speedline;
 
