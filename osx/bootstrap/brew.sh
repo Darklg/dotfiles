@@ -39,7 +39,6 @@ brew install shellcheck;
 brew install speedtest-cli;
 brew install switchaudio-osx;
 brew install tree;
-brew install ttfautohint fontforge --with-python;
 brew install wget;
 brew install youtube-dl;
 
