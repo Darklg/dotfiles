@@ -1,22 +1,45 @@
 [color]
-  ui = true
-[format]
-  pretty = oneline
-[mergetool]
-  keepBackup = true
-[alias]
-  a = !git add -u . && git add .
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-  ps = !git stash && git pull --rebase && git stash apply
-  pr = pull --rebase
-  res = reset --hard HEAD
-  who = shortlog -sn --
-  ignore = update-index --assume-unchanged
-  unignore = update-index --no-assume-unchanged
-  ignored = "!git ls-files -v | grep ^h | cut -c 3-"
+    ui = true
 [branch]
-  autosetuprebase = always
+    autosetuprebase = always
 [push]
-  default = simple
+    default = matching
+[filter "media"]
+    required = true
+    clean = git media clean %f
+    smudge = git media smudge %f
+[core]
+    excludesfile = /Users/kevin/websites/htdocs/dotfiles/git/.gitignore_global
+    pager = diff-so-fancy | less --tabs=4 -RFX
+    fileMode = false
+[filter "hawser"]
+    clean = git hawser clean %f
+    smudge = git hawser smudge %f
+    required = true
+[filter "lfs"]
+    clean = git lfs clean %f
+    smudge = git lfs smudge %f
+    required = true
+[commit]
+    template = /Users/kevin/websites/htdocs/dotfiles/git/.gitmessage
+[format]
+    pretty = oneline
+[alias]
+    wdiff = diff --color-words -U1
+    a = !git add -u . && git add .
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    ps = !git stash && git pull --rebase && git stash apply
+    pr = pull --rebase
+    res = reset --hard HEAD
+    who = shortlog -sn --
+    ignore = update-index --assume-unchanged
+    unignore = update-index --no-assume-unchanged
+    ignored = "!git ls-files -v | grep ^h | cut -c 3-"
+[mergetool]
+    keepBackup = false
+[pull]
+    rebase = true
+[init]
+    defaultBranch = main
 [diff]
   algorithm = patience
