@@ -74,7 +74,6 @@ open /Applications/Tower.app;
 
 if [[ "${_LOCATION}" != 'onthego' ]];then
     open /System/Applications/Notes.app;
-    open /Applications/Goofy.app;
     open /Applications/TogglDesktop.app;
     open /Applications/Spotify.app;
     open /Applications/Slack.app;
