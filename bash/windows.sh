@@ -74,7 +74,7 @@ open /Applications/Tower.app;
 
 if [[ "${_LOCATION}" != 'onthego' ]];then
     open /System/Applications/Notes.app;
-    open /Applications/TogglDesktop.app;
+    open "/Applications/Toggl Track.app";
     open /Applications/Spotify.app;
     open /Applications/Slack.app;
     open /System/Applications/Mail.app;
@@ -145,20 +145,22 @@ fi;
 if [[ "${_LOCATION}" != "onthego" ]];then
 
     # Left Screen
-    dotfiles_position_app "TogglDesktop" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
+    dotfiles_position_app "Toggl Track" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
     dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
     dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to {0, 549, 960, 866}";
     dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "move and resize to {961, 0, 1600, 1416}";
 
     # Right Screen
     dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
+    # Up
     dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 708}";
     dotfiles_position_app "Trello" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 708}";
     dotfiles_position_app "Reminders" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 708}";
-    dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 708}";
+    # Down
     dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 708, 960, 708}";
     dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 708, 960, 708}";
     dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 708, 960, 708}";
+    dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 708, 960, 708}";
 
     # Middle Screen
     # dotfiles_position_tuck_app "Trello" 1 "left";
@@ -169,7 +171,7 @@ fi;
 if [[ "${_LOCATION}" == "twoscreens" ]];then
 
     # Left Screen
-    dotfiles_position_app "TogglDesktop" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
+    dotfiles_position_app "Toggl Track" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
     dotfiles_position_app "Trello" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
     dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to {0, 549, 960, 866}";
     dotfiles_position_app "Todoist" ${dotfiles_position_left_monitor_id} "move and resize to {0, 549, 960, 866}";
