@@ -99,7 +99,7 @@ brew install --cask spotify;
 brew install --cask vlc;
 
 # Libs & stuff
-brew install --cask pdftotext;
+brew install poppler;
 
 ###################################
 ## Cleanup
