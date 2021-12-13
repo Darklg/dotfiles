@@ -152,15 +152,19 @@ if [[ "${_LOCATION}" != "onthego" ]];then
 
     # Right Screen
     dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
+
     # Up
-    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 708}";
-    dotfiles_position_app "Trello" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 708}";
-    dotfiles_position_app "Reminders" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 708}";
+    _pos_up="{1600, 0, 960, 708}";
+    dotfiles_position_app "Trello" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
+    dotfiles_position_app "Reminders" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
+    dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
+
     # Down
-    dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 708, 960, 708}";
-    dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 708, 960, 708}";
-    dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 708, 960, 708}";
-    dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 708, 960, 708}";
+    _pos_down="{1600, 708, 960, 708}";
+    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
+    dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
+    dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
+    dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
 
     # Middle Screen
     # dotfiles_position_tuck_app "Trello" 1 "left";
