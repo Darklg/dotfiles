@@ -42,6 +42,7 @@ brew install speedtest-cli;
 brew install switchaudio-osx;
 brew install tree;
 brew install wget;
+brew install xcodes;
 brew install youtube-dl;
 
 #####################
