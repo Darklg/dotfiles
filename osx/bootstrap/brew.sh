@@ -53,6 +53,7 @@ export HOMEBREW_CASK_OPTS=--appdir=/Applications;
 
 # Utilities
 brew install --cask 1password;
+brew install --cask airbuddy;
 brew install --cask appcleaner;
 brew install --cask calibre;
 brew install --cask coconutbattery;
