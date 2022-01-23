@@ -4,7 +4,7 @@
 # @raycast.title Open Google Meet
 # @raycast.mode silent
 # @raycast.packageName Google
-# @raycast.icon images/logo.png
+# @raycast.icon images/google-meet.png
 # @raycast.author Mujib Azizi
 # @raycast.authorURL https://github.com/mujibazizi
 # @raycast.description Start a Google Meet session
