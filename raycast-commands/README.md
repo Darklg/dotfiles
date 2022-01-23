@@ -1,4 +1,3 @@
 ## Raycast Commands
 
-A mix of (community commands)[https://github.com/raycast/script-commands] and mine
-
+My [_enabled-commands](https://github.com/raycast/script-commands/tree/master/_enabled-commands) for Raycast
