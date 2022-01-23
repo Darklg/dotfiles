@@ -1,17 +1,17 @@
 #!/bin/bash
 
-# @raycast.title IP Address
-# @raycast.author Kevin
-# @raycast.authorURL https://github.com/Darklg
-# @raycast.description Get IP Address from [ifconfig.me](https://ifconfig.me/).
-
-# @raycast.icon 💾
-# @raycast.mode inline
-# @raycast.packageName Dashboard
+# Required parameters:
 # @raycast.schemaVersion 1
+# @raycast.title External IPv4
+# @raycast.mode inline
+# @raycast.packageName Internet
 
-# @raycast.refreshTime 1h
+# Optional parameters:
+# @raycast.icon 🌐
 
-echo $(curl -s ifconfig.me);
+# Documentation:
+# @raycast.description Copies the external IPv4 to the clipboard.
 
-
+ip=$(curl -4 -s -m 5 https://api.ipify.org)
+echo $ip | tr -d '\n' | pbcopy
+echo "Copied $ip"
