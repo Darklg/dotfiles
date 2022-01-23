@@ -9,3 +9,4 @@ ColorPicker_osx_x64
 Package Control.user-ca-bundle
 *.swp
 /bash/windows-local.sh
+/raycast-commands/raycast-config.sh
