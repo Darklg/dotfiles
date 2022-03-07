@@ -32,6 +32,10 @@ fi;
 _LOCATION="";
 if [[ "${_WIFI_NAME}" == "${_HOME_WIFI}" ]];then
     _LOCATION="home";
+    # Invert monitors
+    _tmp_monitor_id="${dotfiles_position_left_monitor_id}";
+    dotfiles_position_left_monitor_id="${dotfiles_position_right_monitor_id}";
+    dotfiles_position_right_monitor_id="${_tmp_monitor_id}";
 fi;
 if [[ "${_WIFI_NAME}" == "${_OFFICE_WIFI}" ]];then
     _LOCATION="office";
