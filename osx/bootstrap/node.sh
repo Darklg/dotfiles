@@ -25,3 +25,6 @@ npm install -g speedline;
 
 # Gulp
 npm install -g gulp-cli;
+
+# Nativefier
+npm install -g nativefier;
