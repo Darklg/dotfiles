@@ -77,6 +77,7 @@ open /Applications/Sublime\ Text.app;
 open /Applications/Tower.app;
 
 if [[ "${_LOCATION}" != 'onthego' ]];then
+    open /System/Applications/Calendar.app;
     open /System/Applications/Notes.app;
     open "/Applications/Toggl Track.app";
     open /Applications/Spotify.app;
@@ -156,6 +157,7 @@ if [[ "${_LOCATION}" != "onthego" ]];then
 
     # Right Screen
     dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
+    dotfiles_position_app "Calendar" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
 
     # Up
     _pos_up="{1600, 0, 960, 708}";
