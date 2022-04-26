@@ -35,5 +35,6 @@ brew cleanup --prune-prefix;
 ###################################
 
 mas outdated;
+mas outdated;
 mas upgrade;
 softwareupdate --install --all --force --verbose;
