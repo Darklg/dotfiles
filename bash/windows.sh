@@ -75,16 +75,16 @@ open /System/Applications/Utilities/Terminal.app;
 open /Applications/Google\ Chrome.app;
 open /Applications/Sublime\ Text.app;
 open /Applications/Tower.app;
+open /System/Applications/Calendar.app;
+open /Applications/Spotify.app;
+open /Applications/Slack.app;
+open /System/Applications/Notes.app;
+open /System/Applications/Mail.app;
+open /System/Applications/Messages.app;
 
 if [[ "${_LOCATION}" != 'onthego' ]];then
-    open /System/Applications/Calendar.app;
-    open /System/Applications/Notes.app;
     open "/Applications/Toggl Track.app";
-    open /Applications/Spotify.app;
-    open /Applications/Slack.app;
-    open /System/Applications/Mail.app;
     open /Applications/Trello.app;
-    open /System/Applications/Messages.app;
     open /System/Applications/Reminders.app;
 fi;
 
@@ -137,13 +137,31 @@ echo "# Windows Settings";
 if [[ "${_LOCATION}" == "onthego" ]];then
 
     # Left Screen
-    dotfiles_position_app "Sublime Text" 1 "move and resize to {0, 0, 1680, 1025}";
+    dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "do action Full Screen";
 
     # Right Screen
-    dotfiles_position_app "Google Chrome" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1280, 1200}";
-    dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id} "move and resize to {1281, 0, 639, 530}";
-    dotfiles_position_app "Terminal" ${dotfiles_position_right_monitor_id} "move and resize to {1281, 531, 639, 530}";
-    dotfiles_position_app "Tower" ${dotfiles_position_right_monitor_id} "move and resize to {1281, 531, 639, 530}";
+    _pos_left="{0, 0, 990, 1416}";
+    dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
+    dotfiles_position_app "Calendar" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
+    dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
+    dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
+
+    # Up
+    _pos_up="{990, 0, 990, 540}";
+    #dotfiles_position_app "Toggl Track" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
+    dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
+    dotfiles_position_app "Terminal" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
+
+    # Down
+    _pos_down="{990, 540, 990, 520}";
+    dotfiles_position_app "Tower" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
+    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
+    dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
+
+    # Middle Screen
+    # dotfiles_position_tuck_app "Trello" 1 "left";
+    # dotfiles_position_tuck_app "Todoist" 1 "right";
+    dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
 
 fi;
 
