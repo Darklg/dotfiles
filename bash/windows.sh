@@ -140,20 +140,20 @@ if [[ "${_LOCATION}" == "onthego" ]];then
     dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "do action Full Screen";
 
     # Right Screen
-    _pos_left="{0, 0, 990, 1416}";
+    _pos_left="{0, 0, 960, 1416}";
     dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
     dotfiles_position_app "Calendar" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
     dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
-    dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
+    dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
 
     # Up
-    _pos_up="{990, 0, 990, 540}";
+    _pos_up="{960, 0, 960, 540}";
+    dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
     #dotfiles_position_app "Toggl Track" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
-    dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
     dotfiles_position_app "Terminal" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
 
     # Down
-    _pos_down="{990, 540, 990, 520}";
+    _pos_down="{960, 540, 960, 520}";
     dotfiles_position_app "Tower" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
     dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
     dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
