@@ -33,6 +33,7 @@ brew install imagemagick;
 brew install jq;
 brew install mackup;
 brew install mas;
+brew install m-cli;
 brew install phplint;
 brew install phpunit;
 brew install redis;
