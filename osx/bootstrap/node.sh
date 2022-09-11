@@ -28,3 +28,6 @@ npm install -g gulp-cli;
 
 # Nativefier
 npm install -g nativefier;
+
+# Tools
+yarn global add imageoptim-cli;
