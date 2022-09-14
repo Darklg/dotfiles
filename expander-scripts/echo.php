@@ -31,5 +31,6 @@ $html = str_replace(")
 echo '<", ") . '<", $html);
 $html = str_replace(");
 echo '</", ") . '</", $html);
+$html = preg_replace("/\>\';\necho ([a-z])/", ">' . $1", $html);
 
 echo $html;
