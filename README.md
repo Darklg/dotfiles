@@ -22,11 +22,19 @@ My dotfiles
 ```
 export PATH="/usr/local/bin:$PATH";
 export PATH="/usr/local/sbin:$PATH";
+export PATH=~/.npm-global/bin:$PATH
 
 . ~/websites/htdocs/git/dotfiles/bash/config.sh
 . ~/websites/htdocs/git/dotfiles/bash/prompt.sh
 . ~/websites/htdocs/git/dotfiles/bash/aliases.sh
 . ~/websites/htdocs/git/dotfiles/bash/autocomplete.sh
+```
+
+## Config NPM
+
+```
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
 ```
 
 ## Quick commands
