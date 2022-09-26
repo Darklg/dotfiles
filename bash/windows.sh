@@ -51,7 +51,8 @@ _QUESTION_LOC=$(cat <<EOF
 - Where are you ?
 - 1 : On the go ?
 - 2 : Home / Office ?
-[1/2]
+- 3 : Twoscreens ?
+[1/2/3]
 EOF
 );
 
@@ -63,6 +64,9 @@ fi;
 if [[ "${_LOCATION_READ}" == '2' ]];then
     _LOCATION="office";
 fi;
+if [[ "${_LOCATION_READ}" == '3' ]];then
+    _LOCATION="twoscreens";
+fi;
 
 echo "# Activated mode : “${_LOCATION}”";
 
@@ -70,6 +74,7 @@ echo "# Activated mode : “${_LOCATION}”";
 ## First, manually open all apps
 ###################################
 
+open /Applications/Figma.app;
 open /Applications/Todoist.app;
 open /System/Applications/Utilities/Terminal.app;
 open /Applications/Google\ Chrome.app;
@@ -172,7 +177,7 @@ if [[ "${_LOCATION}" == "onthego" ]];then
 
 fi;
 
-if [[ "${_LOCATION}" != "onthego" ]];then
+if [[ "${_LOCATION}" != "onthego" && "${_LOCATION}" != "twoscreens" ]];then
 
     # Left Screen
     dotfiles_position_app "Toggl Track" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
@@ -181,7 +186,7 @@ if [[ "${_LOCATION}" != "onthego" ]];then
     dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "move and resize to {961, 0, 1600, 1416}";
 
     # Right Screen
-    dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
+    #dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
     dotfiles_position_app "Calendar" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
 
     # Up
@@ -205,25 +210,26 @@ fi;
 
 if [[ "${_LOCATION}" == "twoscreens" ]];then
 
-    # Left Screen
-    dotfiles_position_app "Toggl Track" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
-    dotfiles_position_app "Trello" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
-    dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to {0, 549, 960, 866}";
-    dotfiles_position_app "Todoist" ${dotfiles_position_left_monitor_id} "move and resize to {0, 549, 960, 866}";
-    dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "move and resize to {961, 0, 1600, 1416}";
+    dotfiles_position_left_monitor_id=2;
 
-    # Right Screen
-    dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
-    dotfiles_position_app "Terminal" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 0, 960, 708}";
-    dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 708, 960, 708}";
-    dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 708, 960, 708}";
-    dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 708, 960, 708}";
-    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1600, 708, 960, 708}";
+    # Figma in full screen
+    dotfiles_position_fullscreen_app "Mail";
+    dotfiles_position_fullscreen_app "Figma";
+
+    # Left Side
+    dotfiles_position_app "Toggl Track" ${dotfiles_position_left_monitor_id} "move and resize to {1601, 0, 960, 548}";
+    dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to {1601, 0, 960, 548}";
+    dotfiles_position_app "Slack" ${dotfiles_position_left_monitor_id} "move and resize to {1601, 549, 960, 866}";
+    dotfiles_position_app "Spotify" ${dotfiles_position_left_monitor_id} "move and resize to {1601, 549, 960, 866}";
+    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1601, 549, 960, 866}";
+    dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to {1601, 549, 960, 866}";
+    dotfiles_position_app "Todoist" ${dotfiles_position_left_monitor_id} "move and resize to {1601, 549, 960, 866}";
+
+    # Right Side
+    dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 1600, 1416}";
 
     # Middle Screen
-    # dotfiles_position_tuck_app "Trello" 1 "left";
-    # dotfiles_position_tuck_app "Todoist" 1 "right";
-    dotfiles_position_app "Sublime Text" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
+    dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
 fi;
 
 if [[ "${_MUSIC_IS_PLAYING}" == '0' && "${_LOCATION}" != "onthego" ]]; then

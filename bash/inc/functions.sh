@@ -56,3 +56,18 @@ tell application "$1"
 end tell
 EOF
 }
+
+dotfiles_position_fullscreen_app() {
+    # App in full screen
+    osascript <<EOF
+    -- Wait a moment ...
+    delay 0.3
+    tell application "$1" to activate
+    delay 0.3
+    tell application "System Events"
+        keystroke "f" using {command down, control down}
+    end tell
+    -- Wait a moment ...
+    delay 0.3
+EOF
+}
