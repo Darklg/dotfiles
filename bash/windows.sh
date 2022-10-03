@@ -216,17 +216,23 @@ if [[ "${_LOCATION}" == "twoscreens" ]];then
     dotfiles_position_fullscreen_app "Mail";
     dotfiles_position_fullscreen_app "Figma";
 
+    _pos_top_left="{0, 0, 640, 548}";
+    _pos_bottom_left="{0, 549, 640, 866}";
+    _pos_top_right="{1920, 0, 640, 548}";
+    _pos_bottom_right="{1920, 549, 640, 866}";
+
     # Left Side
-    dotfiles_position_app "Toggl Track" ${dotfiles_position_left_monitor_id} "move and resize to {1601, 0, 960, 548}";
-    dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to {1601, 0, 960, 548}";
-    dotfiles_position_app "Slack" ${dotfiles_position_left_monitor_id} "move and resize to {1601, 549, 960, 866}";
-    dotfiles_position_app "Spotify" ${dotfiles_position_left_monitor_id} "move and resize to {1601, 549, 960, 866}";
-    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to {1601, 549, 960, 866}";
-    dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to {1601, 549, 960, 866}";
-    dotfiles_position_app "Todoist" ${dotfiles_position_left_monitor_id} "move and resize to {1601, 549, 960, 866}";
+    dotfiles_position_app "Toggl Track" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_top_left}";
+    dotfiles_position_app "Slack" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_bottom_left}";
+    dotfiles_position_app "Spotify" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_bottom_left}";
+    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_bottom_left}";
+    dotfiles_position_app "Todoist" ${dotfiles_position_left_monitor_id} "move and resize to  ${_pos_bottom_left}";
+    dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_top_right}";
+    dotfiles_position_app "Messages" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_bottom_right}";
+    dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_bottom_right}";
 
     # Right Side
-    dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 1600, 1416}";
+    dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "move and resize to {640, 0, 1280, 1416}";
 
     # Middle Screen
     dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
