@@ -12,6 +12,7 @@ mas install 1357379892; # Menu Bar Controller for Sonos
 mas install 1384080005; # Tweetbot
 mas install 1388020431; # DevCleaner
 mas install 1425368544  # Timery
+mas install 1452453066; # Hidden Bar
 mas install 1480068668; # Messenger
 mas install 1518425043; # Boop
 mas install 1529448980; # Reeder
@@ -22,7 +23,6 @@ mas install 409183694;  # Keynote
 mas install 409201541;  # Pages
 mas install 409203825;  # Numbers
 mas install 411643860;  # Daisy Disk
-mas install 411643860;  # DaisyDisk
 mas install 462054704;  # Microsoft Word
 mas install 462058435;  # Microsoft Excel
 mas install 513610341;  # Integrity

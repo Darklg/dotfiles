@@ -57,6 +57,8 @@ chflags nohidden ~/Library
 # Set the Finder prefs for showing a few different volumes on the Desktop.
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
 
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
@@ -134,22 +136,25 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 # 10: Put display to sleep
 # 11: Launchpad
 # 12: Notification Center
+# 12: ?
+# 14: Note
 #
-# Bottom right screen corner → Desktop
-defaults write com.apple.dock wvous-br-corner -int 4
-defaults write com.apple.dock wvous-br-modifier -int 0
 
 # Bottom left screen corner → Desktop
 defaults write com.apple.dock wvous-bl-corner -int 4
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
-# Top right screen corner → Desktop
-defaults write com.apple.dock wvous-tr-corner -int 4
-defaults write com.apple.dock wvous-tr-modifier -int 0
+# Bottom right screen corner → Notes
+defaults write com.apple.dock wvous-br-corner -int 14
+defaults write com.apple.dock wvous-br-modifier -int 0
 
 # Top left screen corner → Mission Control
 defaults write com.apple.dock wvous-tl-corner -int 2
 defaults write com.apple.dock wvous-tl-modifier -int 0
+
+# Top right screen corner → Desktop
+defaults write com.apple.dock wvous-tr-corner -int 4
+defaults write com.apple.dock wvous-tr-modifier -int 0
 
 ##
 ## SCREENSHOTS ##
@@ -170,8 +175,8 @@ defaults write com.apple.screencapture type -string "png"
 # Screenshot name
 defaults write com.apple.screencapture name "capture"
 
-# Removes date from screenshot name
-defaults write com.apple.screencapture include-date -bool false
+# Includes date from screenshot name
+defaults write com.apple.screencapture include-date -bool true
 
 ##
 ## Trackpad ##
