@@ -86,6 +86,7 @@ open /Applications/Slack.app;
 open /System/Applications/Notes.app;
 open /System/Applications/Mail.app;
 open /System/Applications/Messages.app;
+open /System/Applications/Stickies.app;
 
 if [[ "${_LOCATION}" != 'onthego' ]];then
     open "/Applications/Toggl Track.app";
