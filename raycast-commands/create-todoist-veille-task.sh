@@ -13,11 +13,10 @@
 # Documentation:
 # @raycast.description Create a task in Todoist with specific tags
 
-_DATA1='{"content": "';
-_DATA2='","label_ids":';
-_DATA3=',"due_string":"today"}';
-
+_TEMP_ID=$(uuidgen);
+_UUID_TMP=$(uuidgen);
 _config_file="$(dirname $BASH_SOURCE)/raycast-config.sh";
+
 if [[ -f "${_config_file}" ]];then
    . "${_config_file}";
 else
@@ -25,6 +24,8 @@ else
    return;
 fi;
 
-curl -s "https://api.todoist.com/rest/v1/tasks" -X POST --data "${_DATA1}${1}${_DATA2}${_todoist_labels}${_DATA3}" -H "Content-Type: application/json" -H "Authorization: Bearer ${_todoist_token}" > /dev/null;
+curl -s https://api.todoist.com/sync/v9/sync \
+    -H "Authorization: Bearer ${_todoist_token}" \
+    -d commands="[{\"type\": \"item_add\", \"due\":{\"string\":\"tomorrow\"},\"uuid\": \"${_UUID_TMP}\",\"temp_id\": \"${_TEMP_ID}\", \"args\": {\"content\": \"${1}\",\"labels\": ${_todoist_labels}}}]" > /dev/null;
 
 echo "Task created !";
