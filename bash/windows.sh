@@ -83,7 +83,6 @@ open /Applications/Tower.app;
 open /System/Applications/Calendar.app;
 open /Applications/Spotify.app;
 open /Applications/Slack.app;
-open /Applications/Obsidian.app;
 open /System/Applications/Notes.app;
 open /System/Applications/Mail.app;
 open /System/Applications/Messages.app;
@@ -124,8 +123,8 @@ elif [[ $_DF_AUDIO_SOURCES = *Realtek\ USB* ]]; then
     SwitchAudioSource -t output -s 'Realtek USB2.0 Audio';
 elif [[ $_DF_AUDIO_SOURCES = *AirPods\ Pro* ]]; then
     osascript -e 'set volume output volume 50';
-    SwitchAudioSource -t input -s 'AirPods Pro 2 de Kévin';
-    SwitchAudioSource -t output -s 'AirPods Pro 2 de Kévin';
+    SwitchAudioSource -t input -s 'AirPods Pro de Kévin';
+    SwitchAudioSource -t output -s 'AirPods Pro de Kévin';
 elif [[ $_DF_AUDIO_SOURCES = *Écouteurs\ externes* ]]; then
     osascript -e 'set volume output volume 30';
     SwitchAudioSource -t output -s 'Écouteurs externes';
@@ -157,7 +156,6 @@ if [[ "${_LOCATION}" == "onthego" ]];then
     _pos_left="{0, 0, 960, 1416}";
     dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
     dotfiles_position_app "Calendar" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
-    dotfiles_position_app "Obsidian" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
     dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
     dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
 
@@ -191,7 +189,6 @@ if [[ "${_LOCATION}" != "onthego" && "${_LOCATION}" != "twoscreens" ]];then
     # Right Screen
     #dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
     dotfiles_position_app "Calendar" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
-    dotfiles_position_app "Obsidian" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
 
     # Up
     _pos_up="{1600, 0, 960, 708}";
