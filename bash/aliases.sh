@@ -70,6 +70,27 @@ alias ghpages='git checkout gh-pages && git rebase master && git checkout master
 alias giti='git gc && git pull --rebase && git push --all';
 alias gitisub='git pull --recurse-submodules && git submodule update --recursive';
 alias gitexp='git archive --format zip --output ../export.zip master && echo "Export ok !"';
+
+function gitimerge(){
+    if [[ "${1}" == "" || "${2}" == "" ]];then
+        echo 'Usage : gitimerge feature-branch-name staging-branch';
+        return 0;
+    fi;
+    echo "Merging branch ${1} into ${2}.";
+    read -p "Type enter to continue or anything else to stop:" _continue_gitimerge
+    if [[ "${_continue_gitimerge}" != '' ]];then
+        echo '- Merge stopped';
+        return 0;
+    fi;
+    git checkout "${1}" \
+        && git pull \
+        && git checkout "${2}" \
+        && git pull \
+        && git merge "${1}" \
+        && git push \
+        && git checkout "${1}";
+    echo '- Merge done !';
+}
 function gitrmsubmodule () {
     if [[ "${1: -1}" == '/' ]];then
         echo "- Submodule path should not end with a '/'.";
