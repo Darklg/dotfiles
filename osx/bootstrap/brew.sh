@@ -63,7 +63,9 @@ brew install --cask fontplop;
 brew install --cask handbrake;
 brew install --cask macdown;
 brew install --cask maestral;
+brew install --cask obsidian;
 brew install --cask onyx;
+brew install --cask raycast;
 brew install --cask setapp;
 brew install --cask sizeup;
 brew install --cask slack;
@@ -76,6 +78,7 @@ brew install --cask tunnelbear;
 brew install --cask tunnelblick;
 
 # Work
+brew install --cask figma;
 brew install --cask imagealpha;
 brew install --cask imageoptim;
 brew install --cask insomnia;
