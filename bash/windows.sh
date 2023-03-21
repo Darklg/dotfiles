@@ -51,8 +51,9 @@ _QUESTION_LOC=$(cat <<EOF
 - Where are you ?
 - 1 : On the go ?
 - 2 : Home / Office ?
-- 3 : Twoscreens ?
-[1/2/3]
+- 3 : Two screens (up and down) ?
+- 4 : Two screens ?
+[1/2/3/4]
 EOF
 );
 
@@ -65,6 +66,9 @@ if [[ "${_LOCATION_READ}" == '2' ]];then
     _LOCATION="office";
 fi;
 if [[ "${_LOCATION_READ}" == '3' ]];then
+    _LOCATION="twoscreensup";
+fi;
+if [[ "${_LOCATION_READ}" == '4' ]];then
     _LOCATION="twoscreens";
 fi;
 
@@ -178,7 +182,11 @@ if [[ "${_LOCATION}" == "onthego" ]];then
 
 fi;
 
-if [[ "${_LOCATION}" != "onthego" && "${_LOCATION}" != "twoscreens" ]];then
+if [[ "${_LOCATION}" != "onthego" && "${_LOCATION}" != "twoscreensup" ]];then
+    if [[ "${_LOCATION}" == 'twoscreens' ]];then
+        dotfiles_position_left_monitor_id="2";
+        dotfiles_position_right_monitor_id="1";
+    fi;
 
     # Left Screen
     dotfiles_position_app "Toggl Track" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
@@ -187,7 +195,7 @@ if [[ "${_LOCATION}" != "onthego" && "${_LOCATION}" != "twoscreens" ]];then
     dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "move and resize to {961, 0, 1600, 1416}";
 
     # Right Screen
-    #dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
+    dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
     dotfiles_position_app "Calendar" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
 
     # Up
@@ -206,10 +214,14 @@ if [[ "${_LOCATION}" != "onthego" && "${_LOCATION}" != "twoscreens" ]];then
     # Middle Screen
     # dotfiles_position_tuck_app "Trello" 1 "left";
     # dotfiles_position_tuck_app "Todoist" 1 "right";
-    dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
+    if [[ "${_LOCATION}" != 'twoscreens' ]];then
+        dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
+    else
+        dotfiles_position_app "Sublime Text" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
+    fi;
 fi;
 
-if [[ "${_LOCATION}" == "twoscreens" ]];then
+if [[ "${_LOCATION}" == "twoscreensup" ]];then
 
     dotfiles_position_left_monitor_id=2;
 
