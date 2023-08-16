@@ -187,6 +187,15 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClic
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
 ##
+## Mouse ##
+
+# Acceleration for magic mouse
+defaults write -g com.apple.mouse.scaling 5.0;
+
+# Right click for magic mouse
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode TwoButton
+
+##
 ## KEYBOARD ##
 
 # Enable “natural” (Lion-style) scrolling
