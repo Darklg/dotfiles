@@ -28,6 +28,8 @@ if [[ "$(pmset -g | grep ' sleep')" == *"coreaudiod"* ]]; then
     _MUSIC_IS_PLAYING="1";
 fi;
 
+echo "- Wifi name: ${_WIFI_NAME}";
+
 # Detect location
 _LOCATION="";
 if [[ "${_WIFI_NAME}" == "${_HOME_WIFI}" ]];then
