@@ -7,6 +7,7 @@ $safe_words = array('echo', 'for', 'foreach', 'continue;', 'return;', 'if', 'whi
 foreach ($text_lines as $line) {
 
     $line = str_replace('if(', 'if (', $line);
+    $line = str_replace('foreach(', 'foreach (', $line);
     $line = str_replace(array(';?>', '; ?>'), " . '", $line);
     $line = str_replace(array('<?php', '?>'), "", $line);
     $line = trim($line);
