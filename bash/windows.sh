@@ -87,6 +87,7 @@ open /Applications/Google\ Chrome.app;
 open /Applications/Sublime\ Text.app;
 open /Applications/Tower.app;
 open /System/Applications/Calendar.app;
+open /Applications/Obsidian.app;
 open /Applications/Spotify.app;
 open /Applications/Slack.app;
 open /System/Applications/Notes.app;
@@ -202,6 +203,7 @@ if [[ "${_LOCATION}" != "onthego" && "${_LOCATION}" != "twoscreensup" ]];then
 
     # Right Screen
     dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
+    dotfiles_position_app "Obsidian" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
     dotfiles_position_app "Calendar" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
 
     # Up
@@ -233,6 +235,7 @@ if [[ "${_LOCATION}" == "twoscreensup" ]];then
 
     # Figma in full screen
     dotfiles_position_fullscreen_app "Mail";
+    dotfiles_position_fullscreen_app "Obsidian";
     dotfiles_position_fullscreen_app "Figma";
 
     _pos_top_left="{0, 0, 640, 548}";
