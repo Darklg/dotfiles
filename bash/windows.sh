@@ -83,6 +83,7 @@ echo "# Activated mode : “${_LOCATION}”";
 open /Applications/Figma.app;
 open /Applications/Todoist.app;
 open /System/Applications/Utilities/Terminal.app;
+open /Applications/Prompt.app;
 open /Applications/Google\ Chrome.app;
 open /Applications/Sublime\ Text.app;
 open /Applications/Tower.app;
@@ -174,6 +175,7 @@ if [[ "${_LOCATION}" == "onthego" ]];then
     _pos_up="{960, 0, 960, 540}";
     dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
     #dotfiles_position_app "Toggl Track" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
+    dotfiles_position_app "Prompt" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
     dotfiles_position_app "Terminal" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
 
     # Down
@@ -198,6 +200,7 @@ if [[ "${_LOCATION}" != "onthego" && "${_LOCATION}" != "twoscreensup" ]];then
     # Left Screen
     dotfiles_position_app "Toggl Track" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
     dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
+    dotfiles_position_app "Prompt" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
     dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to {0, 549, 960, 866}";
     dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "move and resize to {961, 0, 1600, 1416}";
 
@@ -249,6 +252,7 @@ if [[ "${_LOCATION}" == "twoscreensup" ]];then
     dotfiles_position_app "Spotify" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_bottom_left}";
     dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_bottom_left}";
     dotfiles_position_app "Todoist" ${dotfiles_position_left_monitor_id} "move and resize to  ${_pos_bottom_left}";
+    dotfiles_position_app "Prompt" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_top_right}";
     dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_top_right}";
     dotfiles_position_app "Messages" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_bottom_right}";
     dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_bottom_right}";
