@@ -33,6 +33,7 @@ rm -rf ~/Library/Logs/CoreSimulator*;
 rm -rf ~/Library/Logs/CreativeCloud*;
 rm -rf ~/Library/Logs/NGLClient*;
 rm -rf ~/Library/Logs/PDApp*;
+rm -rf ~/Library/Containers/com.apple.mail/Data/Library/Logs/Mail/*;
 
 ###################################
 ## Delete cache
@@ -46,10 +47,6 @@ rm -rf ~/Library/Containers/com.apple.iBooksX/Data/Library/Caches*
 # Composer
 rm -rf ~/.composer/*.phar
 rm -rf ~/.composer/cache/
-
-# Trello
-rm -rf ~/Library/Containers/com.atlassian.trello/Data/Library/Application\ Support/Trello/Cache
-rm -rf ~/Library/Containers/com.atlassian.trello/Data/Library/Application\ Support/Trello/Code\ Cache
 
 # Homebrew
 rm -rf ~/Library/Caches/Homebrew/*.phar;
@@ -100,11 +97,8 @@ rm -rf ~/Library/Containers/com.reederapp.5.macOS/Data/Library/Caches/*;
 # Xcode
 rm -rf ~/Library/Developer/CoreSimulator/Caches/dyld/*
 rm -rf ~/Library/Developer/Xcode/watchOS\ DeviceSupport/*
-rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport/13.6*
-rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport/14.0*
-rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport/14.1*
-rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport/14.2*
-rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport/14.3*
+rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport/13.*
+rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport/14.*
 rm -rf ~/Library/Caches/com.apple.dt.Xcode/Downloads/Xcode*Watch*.dmg
 
 # Todoist
@@ -112,6 +106,8 @@ rm -rf ~/Library/Containers/com.todoist.mac.Todoist/Data/Library/Caches/
 
 # Trello
 rm -rf ~/Library/Containers/com.atlassian.trello/Data/Library/Application\ Support/Trello/Service\ Worker/CacheStorage
+rm -rf ~/Library/Containers/com.atlassian.trello/Data/Library/Application\ Support/Trello/Cache
+rm -rf ~/Library/Containers/com.atlassian.trello/Data/Library/Application\ Support/Trello/Code\ Cache
 
 # Discord
 rm -rf ~/Library/Application\ Support/discord/Cache/*
