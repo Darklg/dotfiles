@@ -11,7 +11,7 @@ _SOURCEDIR="$( dirname "${BASH_SOURCE[0]}" )/";
 
 
 # Get Wi-Fi name
-_WIFI_NAME=$(/System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -I | awk -F: '/ SSID/{print $2}' | xargs);
+_WIFI_NAME=$(networksetup -getairportnetwork en0 | cut -c 24-);
 
 # Screen settings
 . "${_SOURCEDIR}/inc/functions.sh";
@@ -98,7 +98,6 @@ open /System/Applications/Stickies.app;
 
 if [[ "${_LOCATION}" != 'onthego' ]];then
     open "/Applications/Toggl Track.app";
-    open /Applications/Trello.app;
     open /System/Applications/Reminders.app;
 fi;
 
@@ -185,7 +184,6 @@ if [[ "${_LOCATION}" == "onthego" ]];then
     dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
 
     # Middle Screen
-    # dotfiles_position_tuck_app "Trello" 1 "left";
     # dotfiles_position_tuck_app "Todoist" 1 "right";
     dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
 
@@ -211,7 +209,6 @@ if [[ "${_LOCATION}" != "onthego" && "${_LOCATION}" != "twoscreensup" ]];then
 
     # Up
     _pos_up="{1600, 0, 960, 708}";
-    dotfiles_position_app "Trello" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
     dotfiles_position_app "Reminders" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
     dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
 
@@ -223,7 +220,6 @@ if [[ "${_LOCATION}" != "onthego" && "${_LOCATION}" != "twoscreensup" ]];then
     dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
 
     # Middle Screen
-    # dotfiles_position_tuck_app "Trello" 1 "left";
     # dotfiles_position_tuck_app "Todoist" 1 "right";
     if [[ "${_LOCATION}" != 'twoscreens' ]];then
         dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
