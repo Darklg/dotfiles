@@ -2,6 +2,7 @@
 *.sql
 *.zip
 .DS_Store
+.phpintel
 .sass-cache
 .vscode
 .wakatime
