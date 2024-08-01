@@ -80,12 +80,14 @@ echo "# Activated mode : “${_LOCATION}”";
 ## First, manually open all apps
 ###################################
 
+open /Applications/SelfControl.app;
 open /Applications/Figma.app;
 open /Applications/Todoist.app;
 open /System/Applications/Utilities/Terminal.app;
 open /Applications/Prompt.app;
 open /Applications/Google\ Chrome.app;
 open /Applications/Sublime\ Text.app;
+open /Applications/Visual\ Studio\ Code.app;
 open /Applications/Tower.app;
 open /System/Applications/Calendar.app;
 open /Applications/Obsidian.app;
@@ -186,6 +188,7 @@ if [[ "${_LOCATION}" == "onthego" ]];then
     # Middle Screen
     # dotfiles_position_tuck_app "Todoist" 1 "right";
     dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
+    dotfiles_position_app "Visual Studio Code" 1 "do action Full Screen";
 
 fi;
 
@@ -223,8 +226,10 @@ if [[ "${_LOCATION}" != "onthego" && "${_LOCATION}" != "twoscreensup" ]];then
     # dotfiles_position_tuck_app "Todoist" 1 "right";
     if [[ "${_LOCATION}" != 'twoscreens' ]];then
         dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
+        dotfiles_position_app "Visual Studio Code" 1 "do action Full Screen";
     else
         dotfiles_position_app "Sublime Text" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
+        dotfiles_position_app "Visual Studio Code" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
     fi;
 fi;
 
@@ -258,6 +263,7 @@ if [[ "${_LOCATION}" == "twoscreensup" ]];then
 
     # Middle Screen
     dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
+    dotfiles_position_app "Visual Studio Code" 1 "do action Full Screen";
 fi;
 
 if [[ "${_MUSIC_IS_PLAYING}" == '0' && "${_LOCATION}" != "onthego" ]]; then
