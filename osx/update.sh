@@ -5,17 +5,25 @@
 ###################################
 
 composer self-update;
+###################################
+## Permissions
+###################################
+
+sudo chown -R $USER:$(id -gn $USER) /Users/kevin/.config
+sudo chown -R $USER /usr/local/lib/node_modules;
+sudo chown -R $USER /opt/homebrew/lib/node_modules/;
+sudo chown -R $USER /opt/homebrew/Cellar/;
+sudo chown -R $USER:$(id -gn $USER)  ~/.npm
+sudo chown -R $USER:$(id -gn $USER)  ~/node_modules
 
 ###################################
 ## Node
 ###################################
 
-sudo chown -R $USER:$(id -gn $USER) /Users/kevin/.config
-sudo chown -R $USER /usr/local/lib/node_modules;
-sudo n stable;
 sudo npm install -g n;
+sudo n stable;
 sudo npm cache clean -f;
-npm update -g;
+sudo npm update -g;
 
 ###################################
 ## HOMEBREW
