@@ -39,6 +39,9 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 # Set sidebar icon size to small
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
+# Menu bar spacing small
+defaults -currentHost write -globalDomain NSStatusItemSpacing -int 24
+
 # Menu bar: enable transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool true
 
