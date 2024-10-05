@@ -46,13 +46,13 @@ fi;
 if [[ "${_LOCATION}" != '' ]];then
     echo "# Detected location : “${_LOCATION}”";
 else
-    _LOCATION="onthego";
+    _LOCATION="office";
 fi;
 
 _QUESTION_LOC=$(cat <<EOF
 - Where are you ?
-- 1 : On the go ?
-- 2 : Home / Office ?
+- 1 : Home / Office ?
+- 2 : On the go ?
 - 3 : Two screens (up and down) ?
 - 4 : Two screens ?
 [1/2/3/4]
@@ -62,10 +62,10 @@ EOF
 # Ask location
 read -p "${_QUESTION_LOC} : " _LOCATION_READ
 if [[ "${_LOCATION_READ}" == '1' ]];then
-    _LOCATION="onthego";
+    _LOCATION="office";
 fi;
 if [[ "${_LOCATION_READ}" == '2' ]];then
-    _LOCATION="office";
+    _LOCATION="onthego";
 fi;
 if [[ "${_LOCATION_READ}" == '3' ]];then
     _LOCATION="twoscreensup";
@@ -84,7 +84,7 @@ open /Applications/SelfControl.app;
 open /Applications/Figma.app;
 open /Applications/Todoist.app;
 open /System/Applications/Utilities/Terminal.app;
-open /Applications/Prompt.app;
+#open /Applications/Prompt.app;
 open /Applications/Google\ Chrome.app;
 open /Applications/Sublime\ Text.app;
 open /Applications/Visual\ Studio\ Code.app;
@@ -130,14 +130,14 @@ elif [[ $_DF_AUDIO_SOURCES = *AirPods\ Max* ]]; then
     osascript -e 'set volume output volume 50';
     SwitchAudioSource -t input -s 'AirPods Max de Kévin';
     SwitchAudioSource -t output -s 'AirPods Max de Kévin';
+elif [[ $_DF_AUDIO_SOURCES = *AirPods\ Pro* ]]; then
+    osascript -e 'set volume output volume 50';
+    SwitchAudioSource -t input -s 'AirPods Pro 2 de Kévin';
+    SwitchAudioSource -t output -s 'AirPods Pro 2 de Kévin';
 elif [[ $_DF_AUDIO_SOURCES = *Realtek\ USB* ]]; then
     osascript -e 'set volume output volume 50';
     SwitchAudioSource -t input -s 'Micro MacBook Pro';
     SwitchAudioSource -t output -s 'Realtek USB2.0 Audio';
-elif [[ $_DF_AUDIO_SOURCES = *AirPods\ Pro* ]]; then
-    osascript -e 'set volume output volume 50';
-    SwitchAudioSource -t input -s 'AirPods Pro de Kévin';
-    SwitchAudioSource -t output -s 'AirPods Pro de Kévin';
 elif [[ $_DF_AUDIO_SOURCES = *Écouteurs\ externes* ]]; then
     osascript -e 'set volume output volume 30';
     SwitchAudioSource -t output -s 'Écouteurs externes';
@@ -152,8 +152,8 @@ fi;
 ## Display
 ###################################
 
-m display down;
-m display up;
+#m display down;
+#m display up;
 
 ###################################
 ## Position the apps
@@ -176,7 +176,7 @@ if [[ "${_LOCATION}" == "onthego" ]];then
     _pos_up="{960, 0, 960, 540}";
     dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
     #dotfiles_position_app "Toggl Track" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
-    dotfiles_position_app "Prompt" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
+    #dotfiles_position_app "Prompt" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
     dotfiles_position_app "Terminal" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
 
     # Down
@@ -201,7 +201,7 @@ if [[ "${_LOCATION}" != "onthego" && "${_LOCATION}" != "twoscreensup" ]];then
     # Left Screen
     dotfiles_position_app "Toggl Track" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
     dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
-    dotfiles_position_app "Prompt" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
+    #dotfiles_position_app "Prompt" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
     dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to {0, 549, 960, 866}";
     dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "move and resize to {961, 0, 1600, 1416}";
 
@@ -253,7 +253,7 @@ if [[ "${_LOCATION}" == "twoscreensup" ]];then
     dotfiles_position_app "Spotify" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_bottom_left}";
     dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_bottom_left}";
     dotfiles_position_app "Todoist" ${dotfiles_position_left_monitor_id} "move and resize to  ${_pos_bottom_left}";
-    dotfiles_position_app "Prompt" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_top_right}";
+    #dotfiles_position_app "Prompt" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_top_right}";
     dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_top_right}";
     dotfiles_position_app "Messages" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_bottom_right}";
     dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_bottom_right}";
