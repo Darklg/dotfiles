@@ -163,27 +163,27 @@ echo "# Windows Settings";
 if [[ "${_LOCATION}" == "onthego" ]];then
 
     # Left Screen
-    dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "do action Full Screen";
+    dotfiles_position_app "Google Chrome" "${dotfiles_position_left_monitor_id}" "do action Full Screen";
 
     # Right Screen
     _pos_left="{0, 0, 960, 1416}";
-    dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
-    dotfiles_position_app "Calendar" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
-    dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
-    dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_left}";
+    dotfiles_position_app "Mail" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_left}";
+    dotfiles_position_app "Calendar" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_left}";
+    dotfiles_position_app "Slack" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_left}";
+    dotfiles_position_app "Todoist" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_left}";
 
     # Up
     _pos_up="{960, 0, 960, 540}";
-    dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
-    #dotfiles_position_app "Toggl Track" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
-    #dotfiles_position_app "Prompt" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
-    dotfiles_position_app "Terminal" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
+    dotfiles_position_app "Spotify" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_up}";
+    #dotfiles_position_app "Toggl Track" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_up}";
+    #dotfiles_position_app "Prompt" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_up}";
+    dotfiles_position_app "Terminal" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_up}";
 
     # Down
     _pos_down="{960, 540, 960, 520}";
-    dotfiles_position_app "Tower" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
-    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
-    dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
+    dotfiles_position_app "Tower" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_down}";
+    dotfiles_position_app "Notes" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_down}";
+    dotfiles_position_app "Messages" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_down}";
 
     # Middle Screen
     # dotfiles_position_tuck_app "Todoist" 1 "right";
@@ -199,28 +199,28 @@ if [[ "${_LOCATION}" != "onthego" && "${_LOCATION}" != "twoscreensup" ]];then
     fi;
 
     # Left Screen
-    dotfiles_position_app "Toggl Track" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
-    dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
-    #dotfiles_position_app "Prompt" ${dotfiles_position_left_monitor_id} "move and resize to {0, 0, 960, 548}";
-    dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to {0, 549, 960, 866}";
-    dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "move and resize to {961, 0, 1600, 1416}";
+    dotfiles_position_app "Toggl Track" "${dotfiles_position_left_monitor_id}" "move and resize to {0, 0, 960, 548}";
+    dotfiles_position_app "Terminal" "${dotfiles_position_left_monitor_id}" "move and resize to {0, 0, 960, 548}";
+    #dotfiles_position_app "Prompt" "${dotfiles_position_left_monitor_id}" "move and resize to {0, 0, 960, 548}";
+    dotfiles_position_app "Tower" "${dotfiles_position_left_monitor_id}" "move and resize to {0, 549, 960, 866}";
+    dotfiles_position_app "Google Chrome" "${dotfiles_position_left_monitor_id}" "move and resize to {961, 0, 1600, 1416}";
 
     # Right Screen
-    dotfiles_position_app "Mail" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
-    dotfiles_position_app "Obsidian" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
-    dotfiles_position_app "Calendar" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
+    dotfiles_position_app "Mail" "${dotfiles_position_right_monitor_id}" "move and resize to {0, 0, 1600, 1416}";
+    dotfiles_position_app "Obsidian" "${dotfiles_position_right_monitor_id}" "move and resize to {0, 0, 1600, 1416}";
+    dotfiles_position_app "Calendar" "${dotfiles_position_right_monitor_id}" "move and resize to {0, 0, 1600, 1416}";
 
     # Up
     _pos_up="{1600, 0, 960, 708}";
-    dotfiles_position_app "Reminders" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
-    dotfiles_position_app "Todoist" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_up}";
+    dotfiles_position_app "Reminders" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_up}";
+    dotfiles_position_app "Todoist" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_up}";
 
     # Down
     _pos_down="{1600, 708, 960, 708}";
-    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
-    dotfiles_position_app "Messages" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
-    dotfiles_position_app "Slack" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
-    dotfiles_position_app "Spotify" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_down}";
+    dotfiles_position_app "Notes" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_down}";
+    dotfiles_position_app "Messages" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_down}";
+    dotfiles_position_app "Slack" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_down}";
+    dotfiles_position_app "Spotify" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_down}";
 
     # Middle Screen
     # dotfiles_position_tuck_app "Todoist" 1 "right";
@@ -228,8 +228,8 @@ if [[ "${_LOCATION}" != "onthego" && "${_LOCATION}" != "twoscreensup" ]];then
         dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
         dotfiles_position_app "Visual Studio Code" 1 "do action Full Screen";
     else
-        dotfiles_position_app "Sublime Text" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
-        dotfiles_position_app "Visual Studio Code" ${dotfiles_position_right_monitor_id} "move and resize to {0, 0, 1600, 1416}";
+        dotfiles_position_app "Sublime Text" "${dotfiles_position_right_monitor_id}" "move and resize to {0, 0, 1600, 1416}";
+        dotfiles_position_app "Visual Studio Code" "${dotfiles_position_right_monitor_id}" "move and resize to {0, 0, 1600, 1416}";
     fi;
 fi;
 
@@ -248,23 +248,30 @@ if [[ "${_LOCATION}" == "twoscreensup" ]];then
     _pos_bottom_right="{1920, 549, 640, 866}";
 
     # Left Side
-    dotfiles_position_app "Toggl Track" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_top_left}";
-    dotfiles_position_app "Slack" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_bottom_left}";
-    dotfiles_position_app "Spotify" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_bottom_left}";
-    dotfiles_position_app "Notes" ${dotfiles_position_right_monitor_id} "move and resize to ${_pos_bottom_left}";
-    dotfiles_position_app "Todoist" ${dotfiles_position_left_monitor_id} "move and resize to  ${_pos_bottom_left}";
-    #dotfiles_position_app "Prompt" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_top_right}";
-    dotfiles_position_app "Terminal" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_top_right}";
-    dotfiles_position_app "Messages" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_bottom_right}";
-    dotfiles_position_app "Tower" ${dotfiles_position_left_monitor_id} "move and resize to ${_pos_bottom_right}";
+    dotfiles_position_app "Toggl Track" "${dotfiles_position_left_monitor_id}" "move and resize to ${_pos_top_left}";
+    dotfiles_position_app "Slack" "${dotfiles_position_left_monitor_id}" "move and resize to ${_pos_bottom_left}";
+    dotfiles_position_app "Spotify" "${dotfiles_position_left_monitor_id}" "move and resize to ${_pos_bottom_left}";
+    dotfiles_position_app "Notes" "${dotfiles_position_right_monitor_id}" "move and resize to ${_pos_bottom_left}";
+    dotfiles_position_app "Todoist" "${dotfiles_position_left_monitor_id}" "move and resize to  ${_pos_bottom_left}";
+    #dotfiles_position_app "Prompt" "${dotfiles_position_left_monitor_id}" "move and resize to ${_pos_top_right}";
+    dotfiles_position_app "Terminal" "${dotfiles_position_left_monitor_id}" "move and resize to ${_pos_top_right}";
+    dotfiles_position_app "Messages" "${dotfiles_position_left_monitor_id}" "move and resize to ${_pos_bottom_right}";
+    dotfiles_position_app "Tower" "${dotfiles_position_left_monitor_id}" "move and resize to ${_pos_bottom_right}";
 
     # Right Side
-    dotfiles_position_app "Google Chrome" ${dotfiles_position_left_monitor_id} "move and resize to {640, 0, 1280, 1416}";
+    dotfiles_position_app "Google Chrome" "${dotfiles_position_left_monitor_id}" "move and resize to {640, 0, 1280, 1416}";
 
     # Middle Screen
     dotfiles_position_app "Sublime Text" 1 "do action Full Screen";
     dotfiles_position_app "Visual Studio Code" 1 "do action Full Screen";
 fi;
+
+_SPOTIFY_PLAYLISTS_ARRAY=(
+    "spotify:playlist:7M5oPOgfC3Lq1fcMRdRdNo"
+    "spotify:playlist:37i9dQZF1EP6YuccBxUcC1"
+    "spotify:playlist:5r4XtPgL4O0YWiLOGACscn"
+);
+_RANDOM_PLAYLIST=${_SPOTIFY_PLAYLISTS_ARRAY[$RANDOM % ${#_SPOTIFY_PLAYLISTS_ARRAY[@]}]};
 
 if [[ "${_MUSIC_IS_PLAYING}" == '0' && "${_LOCATION}" != "onthego" ]]; then
     osascript <<EOF
@@ -272,7 +279,7 @@ tell application "Spotify"
     if shuffling is false then
         set shuffling to true
     end if
-    play track "spotify:playlist:5r4XtPgL4O0YWiLOGACscn"
+    play track "${_RANDOM_PLAYLIST}"
     next track
 end tell
 EOF
