@@ -20,6 +20,7 @@ mas install 1518036000; # Sequel Ace
 mas install 1518425043; # Boop
 mas install 1522267256; # Shareful
 mas install 1529448980; # Reeder
+mas install 1561732866; # Hiwater
 mas install 1568924476; # Mela
 mas install 1569600264; # Pandan
 mas install 1569813296; # 1pass for Safari
