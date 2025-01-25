@@ -16,6 +16,7 @@ mas install 1425368544; # Timery
 mas install 1452453066; # Hidden Bar
 mas install 1480068668; # Messenger
 mas install 1486015273; # AS Timer
+mas install 1507361706; # Hiwater
 mas install 1518036000; # Sequel Ace
 mas install 1518425043; # Boop
 mas install 1522267256; # Shareful
