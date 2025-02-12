@@ -15,7 +15,7 @@ foreach ($text_lines as $line) {
         continue;
     }
     $line_words = explode(' ', $line);
-    if (substr($line,0,4) == 'the_' || in_array($line[0], array('{', '}', '$')) || in_array($line_words[0], $safe_words) || in_array($line_words[0] . ';', $safe_words)) {
+    if (substr($line, 0, 2) == '/*' || substr($line, 0, 4) == 'the_' || substr($line, 0, 4) == 'get_' || in_array($line[0], array('{', '}', '$')) || in_array($line_words[0], $safe_words) || in_array($line_words[0] . ';', $safe_words)) {
         $html .= $line . "\n";
         continue;
     }
