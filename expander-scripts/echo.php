@@ -1,8 +1,16 @@
 <?php
 $html = '';
+
+/* Convert some functions */
+$text = str_replace('<?php the_permalink', '<?php echo get_permalink', $text);
+$text = str_replace('<?php the_title', '<?php echo get_the_title', $text);
+
+/* Prepare content */
 $text = str_replace("<?php", "\n<?php\n", $text);
 $text = str_replace("?>", "\n?>\n", $text);
 $text_lines = explode("\n", trim($text));
+
+/* Filter safe words */
 $safe_words = array('echo', 'for', 'foreach', 'continue;', 'return;', 'if', 'while', 'endif', 'endif;', 'endwhile;', 'endwhile', 'endforeach;', 'endforeach');
 foreach ($text_lines as $line) {
 
@@ -26,6 +34,10 @@ foreach ($text_lines as $line) {
 /* Fix line breaks */
 $html = str_replace(">';
 echo get_", ">' . get_", $html);
+$html = str_replace("href=\"';
+echo get_", "href=\"' . get_", $html);
+$html = str_replace("();
+echo '\">';", "() . '\">';", $html);
 $html = str_replace(">';
 echo wpa", ">' . wpa", $html);
 $html = str_replace(")
