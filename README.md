@@ -11,7 +11,6 @@ My dotfiles
 - OSX Settings : `. osx/set-defaults.sh`
 - Software : `. osx/bootstrap.sh`
 - Config : `. osx/config-logiciels.sh`
-- mackup restore
 
 ## Terminal 101
 
