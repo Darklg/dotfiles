@@ -10,8 +10,16 @@ $text = str_replace("<?php", "\n<?php\n", $text);
 $text = str_replace("?>", "\n?>\n", $text);
 $text_lines = explode("\n", trim($text));
 
+$safe_starts = array(
+    '/*',
+    'the_',
+    'get_',
+    'the_',
+    'do_action'
+);
+
 /* Filter safe words */
-$safe_words = array('echo', 'for', 'foreach', 'continue;', 'return;', 'if', 'while', 'endif', 'endif;', 'endwhile;', 'endwhile', 'endforeach;', 'endforeach');
+$safe_words = array('echo', 'for', 'foreach', 'continue;', 'return;', 'if', 'while', 'endif', 'endif;', 'endwhile;', 'endwhile', 'endforeach;', 'endforeach', 'do_action', 'include', 'require');
 foreach ($text_lines as $line) {
 
     $line = str_replace('if(', 'if (', $line);
@@ -23,7 +31,16 @@ foreach ($text_lines as $line) {
         continue;
     }
     $line_words = explode(' ', $line);
-    if (substr($line, 0, 2) == '/*' || substr($line, 0, 4) == 'the_' || substr($line, 0, 4) == 'get_' || in_array($line[0], array('{', '}', '$')) || in_array($line_words[0], $safe_words) || in_array($line_words[0] . ';', $safe_words)) {
+
+
+    foreach ($safe_starts as $safe_start) {
+        $safe_start_len = strlen($safe_start);
+        if (substr($line, 0, $safe_start_len) == $safe_start) {
+            $html .= $line . "\n";
+            continue 2;
+        }
+    }
+    if (in_array($line[0], array('{', '}', '$')) || in_array($line_words[0], $safe_words) || in_array($line_words[0] . ';', $safe_words)) {
         $html .= $line . "\n";
         continue;
     }
