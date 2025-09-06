@@ -10,14 +10,6 @@ command -v brew >/dev/null 2>&1 || { ruby -e "$(curl -fsSL https://raw.github.co
 # Update
 brew update;
 
-# Add repos
-brew tap "homebrew/cask"
-brew tap "homebrew/cask-versions"
-brew tap "homebrew/cask-fonts"
-
-# Cask
-brew install caskroom/cask/brew-cask;
-
 # Modules
 brew install atomicparsley;
 brew install autojump;
@@ -57,7 +49,6 @@ brew install --cask airbuddy;
 brew install --cask appcleaner;
 brew install --cask calibre;
 brew install --cask coconutbattery;
-brew install --cask dash;
 brew install --cask fontplop;
 brew install --cask handbrake;
 brew install --cask macdown;
@@ -68,10 +59,8 @@ brew install --cask raycast;
 brew install --cask setapp;
 brew install --cask sizeup;
 brew install --cask suspicious-package;
-brew install --cask teamviewer;
 brew install --cask timemachineeditor;
 brew install --cask the-unarchiver;
-brew install --cask tuck;
 brew install --cask tunnelbear;
 brew install --cask tunnelblick;
 
@@ -90,7 +79,6 @@ brew install --cask svgcleaner;
 brew install --cask textexpander;
 brew install --cask tower;
 brew install --cask transmit;
-brew install --cask zeplin;
 
 # Browsers
 brew install --cask google-chrome;
