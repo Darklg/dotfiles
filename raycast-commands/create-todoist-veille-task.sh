@@ -17,12 +17,15 @@ _TEMP_ID=$(uuidgen);
 _UUID_TMP=$(uuidgen);
 _config_file="$(dirname $BASH_SOURCE)/raycast-config.sh";
 
-if [[ -f "${_config_file}" ]];then
-   . "${_config_file}";
-else
-   echo "Missing raycast-config file;";
-   return;
-fi;
+if ! command -v op &> /dev/null; then
+  echo "op is not installed. Please install op to access 1Password."
+  return 0;
+fi
+
+# Get the Todoist private token from 1Password
+eval $(op signin);
+_todoist_token=$(op item get "Todoist" --field "TOKEN");
+_todoist_labels="[\"veille-actionnable\",\"nobrains\",\"commitdujour\"]";
 
 curl -s https://api.todoist.com/sync/v9/sync \
     -H "Authorization: Bearer ${_todoist_token}" \
