@@ -273,7 +273,7 @@ _SPOTIFY_PLAYLISTS_ARRAY=(
 );
 _RANDOM_PLAYLIST=${_SPOTIFY_PLAYLISTS_ARRAY[$RANDOM % ${#_SPOTIFY_PLAYLISTS_ARRAY[@]}]};
 
-if [[ "${_MUSIC_IS_PLAYING}" == '0' && "${_LOCATION}" != "onthego" ]]; then
+if [[ "${_MUSIC_IS_PLAYING}" == '0' && "${_LOCATION}" != "onthego" && "1" == "0" ]]; then
     osascript <<EOF
 tell application "Spotify"
     if shuffling is false then

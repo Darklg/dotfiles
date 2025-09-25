@@ -35,7 +35,7 @@ brew install switchaudio-osx;
 brew install tree;
 brew install wget;
 brew install xcodes;
-brew install youtube-dl;
+brew install yt-dlp;
 
 #####################
 # Cask : Software
@@ -49,15 +49,14 @@ brew install --cask airbuddy;
 brew install --cask appcleaner;
 brew install --cask calibre;
 brew install --cask coconutbattery;
-brew install --cask fontplop;
 brew install --cask handbrake;
 brew install --cask macdown;
 brew install --cask maestral;
 brew install --cask obsidian;
 brew install --cask onyx;
 brew install --cask raycast;
+brew install --cask rectangle;
 brew install --cask setapp;
-brew install --cask sizeup;
 brew install --cask suspicious-package;
 brew install --cask timemachineeditor;
 brew install --cask the-unarchiver;
@@ -73,7 +72,6 @@ brew install --cask inkscape;
 brew install --cask poedit;
 brew install --cask postman;
 brew install --cask responsively;
-brew install --cask sketch;
 brew install --cask sublime-text;
 brew install --cask svgcleaner;
 brew install --cask textexpander;
