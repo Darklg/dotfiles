@@ -26,13 +26,11 @@ mas install 1518425043; # Boop
 mas install 1522267256; # Shareful
 mas install 1529448980; # Reeder
 mas install 1561732866; # Hiwater
-mas install 1564031042; # Omnivore
 mas install 1568924476; # Mela
 mas install 1569600264; # Pandan
 mas install 1569813296; # 1Password for Safari
 mas install 1579200037; # Medis
 mas install 1594183810; # Shortery
-mas install 1596283165; # rcmd
 mas install 1604176982; # One Thing
 mas install 302584613;  # Kindle
 mas install 310633997;  # WhatsApp
@@ -50,10 +48,8 @@ mas install 585829637;  # Todoist
 mas install 639968404;  # Parcel
 mas install 640199958;  # Developer
 mas install 6444602274; # Ivory
-mas install 6504040051; # Scratchpad
 mas install 6504709660; # Online Check
 mas install 669840342;  # Cashflows
-mas install 6739505345; # Hyperspace
 mas install 747648890;  # Telegram
 mas install 803453959;  # Slack
 mas install 897118787;  # Shazam
