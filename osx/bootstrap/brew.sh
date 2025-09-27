@@ -14,6 +14,7 @@ brew update;
 brew install atomicparsley;
 brew install autojump;
 brew install composer;
+brew install coreutils;
 brew install curl;
 brew install curlftpfs;
 brew install diff-so-fancy;
