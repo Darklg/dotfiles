@@ -29,6 +29,15 @@ export PATH=~/.npm-global/bin:$PATH
 . ~/websites/htdocs/git/dotfiles/bash/autocomplete.sh
 ```
 
+## Config GIT
+
+Add this in ~/.gitconfig
+
+```
+[include]
+    path = /Users/kevinrocher/websites/htdocs/git/dotfiles/git/gitconfig
+```
+
 ## Config NPM
 
 ```
