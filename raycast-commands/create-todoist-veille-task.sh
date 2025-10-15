@@ -24,7 +24,7 @@ fi
 
 # Get the Todoist private token from 1Password
 eval $(op signin);
-_todoist_token=$(op item get "Todoist" --field "TOKEN");
+_todoist_token=$(op item get --reveal "Todoist" --field "TOKEN");
 _todoist_labels="[\"veille-actionnable\",\"nobrains\",\"commitdujour\"]";
 
 curl -s https://api.todoist.com/sync/v9/sync \
