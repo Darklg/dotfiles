@@ -24,8 +24,10 @@ fi
 
 # Get the Todoist private token from 1Password
 eval $(op signin);
-_todoist_token=$(op item get --reveal "Todoist" --field "TOKEN");
+_todoist_token=$(op item get --reveal "Todoist" --field "TOKEN_API");
 _todoist_labels="[\"veille-actionnable\",\"nobrains\",\"commitdujour\"]";
+
+echo "${1}" >> ~/raycast-send-todoist-history.txt;
 
 curl -s https://api.todoist.com/sync/v9/sync \
     -H "Authorization: Bearer ${_todoist_token}" \
