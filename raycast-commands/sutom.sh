@@ -11,7 +11,7 @@
 # Files
 open -a "Safari" "https://framed.wtf/";
 open -a "Safari" "https://framed.wtf/one-frame";
-open -a "Safari" "https://quordle.desmaths.fr/";
+open -a "Safari" "https://quordle.desmaths.fr";
 open -a "Safari" "https://wordle.louan.me";
 open -a "Safari" "https://sutom.nocle.fr";
 open -a "Safari" "https://travle.earth";
