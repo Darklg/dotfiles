@@ -15,7 +15,9 @@ $safe_starts = array(
     'the_',
     'get_',
     'the_',
-    'do_action'
+    'do_action',
+    "'",
+    ")",
 );
 
 /* Filter safe words */
