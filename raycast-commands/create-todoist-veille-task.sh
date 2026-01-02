@@ -33,4 +33,6 @@ curl -s https://api.todoist.com/sync/v9/sync \
     -H "Authorization: Bearer ${_todoist_token}" \
     -d commands="[{\"type\": \"item_add\", \"due\":{\"string\":\"tomorrow\"},\"uuid\": \"${_UUID_TMP}\",\"temp_id\": \"${_TEMP_ID}\", \"args\": {\"content\": \"${1}\",\"labels\": ${_todoist_labels}}}]" > /dev/null;
 
+open "todoist://inbox";
+
 echo "Task created !";
