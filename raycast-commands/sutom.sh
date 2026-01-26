@@ -28,3 +28,6 @@ open "slack://channel?team=T85TA7R29&id=C02TD83TTRB";
 
 # Sticky
 open "/System/Applications/Stickies.app";
+
+# Toggl
+open "/Applications/Toggl Track.app";
