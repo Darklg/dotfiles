@@ -27,11 +27,14 @@ eval $(op signin);
 _todoist_token=$(op item get --reveal "Todoist" --field "TOKEN_API");
 _todoist_labels="[\"veille-actionnable\",\"nobrains\",\"commitdujour\"]";
 
+# Replace straight quotes with typographic quotes in the input
+_task_content=$(echo "${1}" | sed "s/\"/“/g; s/'/‘/g")
+
 echo "${1}" >> ~/raycast-send-todoist-history.txt;
 
 curl -s https://api.todoist.com/sync/v9/sync \
     -H "Authorization: Bearer ${_todoist_token}" \
-    -d commands="[{\"type\": \"item_add\", \"due\":{\"string\":\"tomorrow\"},\"uuid\": \"${_UUID_TMP}\",\"temp_id\": \"${_TEMP_ID}\", \"args\": {\"content\": \"${1}\",\"labels\": ${_todoist_labels}}}]" > /dev/null;
+    -d commands="[{\"type\": \"item_add\", \"due\":{\"string\":\"tomorrow\"},\"uuid\": \"${_UUID_TMP}\",\"temp_id\": \"${_TEMP_ID}\", \"args\": {\"content\": \"${_task_content}\",\"labels\": ${_todoist_labels}}}]" > /dev/null;
 
 open "todoist://inbox";
 
