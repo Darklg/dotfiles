@@ -22,12 +22,6 @@ alias ....='cd ../../..';
 alias .....='cd ../../../..';
 alias hosts='sudo vim /etc/hosts';
 
-# Alias MySQL
-#alias mysql='/Applications/MAMP/Library/bin/mysql'
-alias mysqladmin='sudo /Applications/MAMP/Library/bin/mysqladmin'
-alias mysqlstop='sudo /Applications/MAMP/Library/bin/mysqladmin -u root -p shutdown'
-alias mysqlstart='sudo /Applications/MAMP/Library/bin/mysqld_safe'
-
 # Alias Apache
 alias apachereboot='sudo /Applications/MAMP/Library/bin/httpd -k restart';
 
