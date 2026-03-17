@@ -47,6 +47,7 @@ foreach ($text_lines as $line) {
         continue;
     }
     $line = str_replace('<?php echo ', "' . ", $line);
+    $line = str_replace("'", "\'", $line);
     $html .= "echo '" . $line . "';\n";
 }
 
