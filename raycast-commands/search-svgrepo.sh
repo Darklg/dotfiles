@@ -2,7 +2,7 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title Search in Iconfinder
+# @raycast.title Icon Search in SVG Repo
 # @raycast.mode silent
 # @raycast.packageName Web Searches
 
@@ -10,4 +10,4 @@
 # @raycast.icon images/iconfinder.png
 # @raycast.argument1 { "type": "text", "placeholder": "Icon name...", "percentEncoded": true }
 
-open "https://www.freepik.com/search?price=free&q=$1"
+open "https://www.svgrepo.com/vectors/$1/monocolor/"
