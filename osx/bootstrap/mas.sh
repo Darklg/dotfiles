@@ -49,10 +49,7 @@ mas install 639968404;  # Parcel
 mas install 640199958;  # Developer
 mas install 6444602274; # Ivory
 mas install 6504709660; # Online Check
-mas install 669840342;  # Cashflows
-mas install 747648890;  # Telegram
 mas install 803453959;  # Slack
 mas install 897118787;  # Shazam
 mas install 899247664;  # TestFlight
-mas install 937984704;  # Amphetamine
 mas install 957734279;  # TogglDesktop

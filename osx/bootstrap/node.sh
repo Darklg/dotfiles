@@ -31,3 +31,6 @@ npm install -g nativefier;
 
 # Tools
 yarn global add imageoptim-cli;
+
+# Git Open
+npm install --global git-open
