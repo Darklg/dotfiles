@@ -108,3 +108,31 @@ function gitrmsubmodule () {
 
 # Thanks to
 # - http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
+
+###################################
+## Claude
+###################################
+
+claude_summarize_call() {
+    local file="$1"
+    if [[ -z "$file" || ! -f "$file" ]]; then
+        echo "Usage: claude_summarize_call <file>" >&2
+        return 1
+    fi
+    claude -p "Résume ce transcript de call en français avec un format Markdown.
+
+Suis le format suivant :
+Metadonnées :
+---
+project_name: Nom du projet
+participants:
+  - Intervenant 1
+  - Intervenant 2
+---
+
+Titre du call H1 (#)
+Réponse structurée sujet par sujet (H2) avec les points suivants :
+- Points clés (sans titre)
+- Décisions prises (sous-titre H3)
+Termine par une section 'Actions à faire' avec les actions à faire et le responsable si mentionné." < "$file"
+}
