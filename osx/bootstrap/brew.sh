@@ -25,6 +25,7 @@ brew install imagemagick;
 brew install jq;
 brew install mas;
 brew install m-cli;
+brew install ollama;
 brew install phpunit;
 brew install qlimagesize;
 brew install qlvideo;
@@ -62,11 +63,9 @@ brew install --cask maestral;
 brew install --cask obsidian;
 brew install --cask onyx;
 brew install --cask raycast;
-brew install --cask setapp;
 brew install --cask selfcontrol;
 brew install --cask silentknight;
 brew install --cask suspicious-package;
-brew install --cask timemachineeditor;
 brew install --cask the-unarchiver;
 brew install --cask tunnelbear;
 brew install --cask tunnelblick;
@@ -87,6 +86,7 @@ brew install --cask svgcleaner;
 brew install --cask textexpander;
 brew install --cask tower;
 brew install --cask transmit;
+brew install --cask visual-studio-code;
 
 # Browsers
 brew install --cask google-chrome;
