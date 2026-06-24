@@ -110,8 +110,101 @@ function gitrmsubmodule () {
 # - http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
 
 ###################################
-## Claude
+## IA
 ###################################
+
+_DOTFILE_CALL_SUMMARY_PROMPT="Tu es chargé de résumer un transcript de call en français.
+
+Produis uniquement un document Markdown final.
+N’ajoute aucune balise XML, aucun commentaire, aucune explication sur ta méthode, aucun texte hors du Markdown.
+
+## Objectif
+
+Résume le transcript de call en identifiant les sujets abordés.
+
+Le call peut contenir plusieurs sujets distincts. Pour chaque sujet :
+
+* crée une section dédiée ;
+* regroupe les points clés associés ;
+* ajoute des zooms spécifiques si un point mérite plus de détail ;
+* liste les décisions liées au sujet, lorsqu’il y en a ;
+* rattache les actions au bon sujet ou à la bonne personne lorsque c’est possible.
+
+Si une information ne peut pas être clairement rattachée à un sujet, place-la dans une section “Points transverses” ou “Actions générales”.
+
+## Format attendu
+
+Le résultat doit suivre cette structure Markdown :
+
+<format_attendu>
+---
+
+project_name: Nom du projet
+participants:
+- Intervenant 1
+- Intervenant 2
+
+---
+
+# Titre du call
+
+## Sujet 1
+
+* Point clé 1
+* Point clé 2
+* Point clé 3
+
+### Zoom sur fonctionnalité ou point spécifique
+
+* Détail utile 1
+* Détail utile 2
+
+### Décisions
+
+* Décision 1
+* Décision 2
+
+## Sujet 2
+
+* Point clé 1
+* Point clé 2
+
+### Décisions
+
+* Décision 1
+
+## Points transverses
+
+* Point qui concerne plusieurs sujets
+* Information générale non rattachée à un sujet précis
+
+## Actions à faire
+
+### Personne 1
+
+* Tâche 1
+* Tâche 2
+
+### Personne 2
+
+* Tâche 3
+
+### Plusieurs personnes
+
+* Tâche commune
+
+### Actions générales
+
+* Action non rattachée clairement à une personne
+</format_attendu>
+
+## Règles importantes
+
+* Ne reproduis pas les noms de sections d’exemple s’ils ne correspondent pas au contenu réel du call.
+* Ne crée pas de décisions ou d’actions si elles ne sont pas présentes dans le transcript.
+* Garde les titres en français.
+";
+
 
 claude_summarize_call() {
     local file="$1"
@@ -119,20 +212,16 @@ claude_summarize_call() {
         echo "Usage: claude_summarize_call <file>" >&2
         return 1
     fi
-    claude -p "Résume ce transcript de call en français avec un format Markdown.
 
-Suis le format suivant :
-Metadonnées :
----
-project_name: Nom du projet
-participants:
-  - Intervenant 1
-  - Intervenant 2
----
+    claude -p "$_DOTFILE_CALL_SUMMARY_PROMPT" < "$file"
+}
 
-Titre du call H1 (#)
-Réponse structurée sujet par sujet (H2) avec les points suivants :
-- Points clés (sans titre)
-- Décisions prises (sous-titre H3)
-Termine par une section 'Actions à faire' avec les actions à faire et le responsable si mentionné." < "$file"
+qwen_summarize_call() {
+    local file="$1"
+    if [[ -z "$file" || ! -f "$file" ]]; then
+        echo "Usage: qwen_summarize_call <file>" >&2
+        return 1
+    fi
+
+    ollama run qwen3:14b "$_DOTFILE_CALL_SUMMARY_PROMPT" < "$file"
 }
