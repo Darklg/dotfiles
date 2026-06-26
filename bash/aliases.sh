@@ -143,7 +143,8 @@ project_name: Nom du projet
 participants:
 - Intervenant 1
 - Intervenant 2
-
+start: 2025-11-05 - 11:00
+end: 2025-11-05 - 12:00
 ---
 
 # Titre du call
