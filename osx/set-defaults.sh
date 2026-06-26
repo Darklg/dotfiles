@@ -40,7 +40,7 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
 # Menu bar spacing small
-defaults -currentHost write -globalDomain NSStatusItemSpacing -int 24
+defaults -currentHost write -globalDomain NSStatusItemSpacing -int 6
 
 # Menu bar: enable transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool true
