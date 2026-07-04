@@ -30,6 +30,7 @@ brew install phpunit;
 brew install qlimagesize;
 brew install qlvideo;
 brew install redis;
+brew install rtk;
 brew install shellcheck;
 brew install shfmt;
 brew install speedtest-cli;
