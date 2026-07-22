@@ -10,6 +10,8 @@ command -v brew >/dev/null 2>&1 || { ruby -e "$(curl -fsSL https://raw.github.co
 # Update
 brew update;
 
+export HOMEBREW_NO_ASK=1;
+
 # Modules
 brew install atomicparsley;
 brew install autojump;
