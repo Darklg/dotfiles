@@ -98,6 +98,7 @@ brew install --cask spotify;
 brew install --cask vlc;
 
 # Libs & stuff
+brew install 1password-cli;
 brew install poppler;
 
 ###################################
