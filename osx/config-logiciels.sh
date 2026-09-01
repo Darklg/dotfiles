@@ -11,3 +11,11 @@ git config --global pull.rebase true;
 ###################################
 
 rtk init -g
+
+###################################
+## Computer name
+###################################
+
+sudo scutil --set ComputerName "MacBook-Kevin"
+sudo scutil --set LocalHostName "MacBook-Kevin"
+sudo scutil --set HostName "MacBook-Kevin"
